@@ -1,0 +1,40 @@
+1. 파이썬 개요 및 개발환경 구성
+2. 자료형과 연산자
+3. 데이터구조
+4. 제어문
+5. 함수
+6. 모듈과 패키지
+7. 객체지향 프로그래밍
+8. 예외처리
+9. 입출력프로그래밍
+10. N차원 배열 다루기 ★
+11. 데이터프레임과 시리즈 ★
+12. 데이터 시각화
+13. 웹 데이터 수집(웹크롤링)
+14. 데이터베이스 연동
+
+(https://www.inflearn.com/community/questions/744555/nbextensions-%EC%9D%98-table-of-contents-%EA%B4%80%EB%A0%A8-%EB%AC%B8%EC%9D%98-%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4?srsltid=AfmBOornuibZWXwz7BLnKxcpAb1xtevj1YujcOpiN86bUM4wRa5iToZt)
+https://mintrin.tistory.com/74 참조
+
+터미널(아나콘다 프롬프트)에서
+conda install -c conda-forge jupyter_nbextensions_configurator
+
+pip install jupyter_nbextensions_configurator jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+jupyter nbextensions_configurator enable --user
+
+jupyter contrib nbextension install --sys-prefix
+conda install nbclassic=0.4.8
+
+Edit > nbextensions config 에서.. (또는 http://localhost:8888/nbextensions) - 1번만 해. 괜히 느려져
+1. Table on Contents(2) : 마크다운 해더 수준에 따른 목차 생성
+2. Variabel Inspector: 현재 변수와 변수값(변수들을 트래킹하는 익스텐션)
+3. Execute Time : 셀이 돌아가는 시간 측정
+
+
+4. Code prettify : 코드를 예쁘게 정리. 불필요한 여백을 없애거나 공간 띄움
+5. Autopep8 : 자동 코드 정리기능(코드가 지저분한 경우, 망치모양 버튼을 클릭하면 PEP 8 스타일 가이드에 맞게 코드를 자동으로 정리)
+6. CodeFolding : 긴코드를 접을 수 있게 해줘서 함수나 반복문, 조건문 등에서 코드를 접어 놓을 수 있어 관리가 편함
+
+
+코드 파일 열어보면 자판 모양 아이콘 옆에 Table of Contents 있음
