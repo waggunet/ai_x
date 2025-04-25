@@ -22,7 +22,31 @@ numpy 패키지 함수와 속성
   np.linspace(from, to, count, dtype) : from 부터 to까지 count개 1차원 배열
   np.arrange(from, stop, step) : from부터 stop앞까지 step씩 증가하는 1차원 배열
   
-
 - 배열 차원 변경
-  reshape()
+  reshape(행수, 열수,면수) : -1 사용하면 자동 계산
+  resize(  tup ) : -1 사용불가
   ravel(), flattern() : 1차원 변경
+  transpose()나 T :  전치행렬
+  ary[:, np.newaxis] == np.expand_dims(ary, axis=1) 차원증가
+
+- 배열연산
+  요소별 연산, 브로드캐스팅
+  행렬 연산(2차원) @(dot함수), 단위행렬(정방행렬)
+  범용함수 np.add(), np.multiply(), np.substract(), np.sqrt()
+
+- 배열합치기
+  np.vstack(tup)
+  np.hstack((tup)
+  np.dstack(tup) : 마지막 축(열)들끼리 합침
+
+  np.column_stack(tup) : 1차원 배열을 열단위로 배열하여 2차원으로 합침
+  np.row_stack(tup, axis)
+
+  np.r_[a, b, ..] : row 단위로 쌓음
+  np.c_[a, b, ..] : 컬럼으로 쌓아서 합침
+
+- 배열분리하기
+  np.vsplit(ary, 정수나 인덱스벡터) == np.split(ary, 정수나 인덱스벡터, axis=0)
+  np.hsplit(ary, 정수나 인덱스벡터 == np.split(ary, 정수나 인덱스벡터, axis=1)
+  np.dsplit(ary, 정수나 인덱스벡터) == np.split(ary, 정수나 인덱스벡터, axis=-1)
+  np.array_split(ary, 정수나 인덱스벡터, axis) : 나눠지지 않는 정수로도 split
