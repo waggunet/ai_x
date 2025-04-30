@@ -1,3 +1,5 @@
 git add .
-git commit -m "자료형 및 연산자"
+pause
+git commit -m "데이터 프레임과 시리즈"
+pause
 git push -u origin main
