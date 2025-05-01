@@ -1,0 +1,41 @@
+# 1. sepal_length 열만 출력
+iris['sepal_length'], iris.sepal_length
+
+# 2. 0~10행까지 마지막 열을 제외한 데이터 (loc, iloc)
+iris.loc[:10, 'sepal_length':'petal_width']
+iris.iloc[:11, :-1]
+
+# 3. 3~10 행중에 'sepal_length'와 'petal_length' 열만 (loc, iloc)
+iris.loc[3:10, ['sepal_length','petal_length'] ]  
+iris.iloc[3:11, [0,2] ]  
+
+# 4. 0번째, 50번째, 100번째 행의 모든 열 (loc, iloc)
+iris.loc[[0,50,100]]
+iris.loc[:100:50] # 비추
+iris.iloc[:101:50]
+
+# 5. 0번째, 25, 50번째, 75번, 100번째, 125번째 행의 petal_length와 petal_width (loc, iloc)
+iris.loc[[0,25,50,75,100,125], 'petal_length':'petal_width']
+iris.loc[::25, 'petal_length':'petal_width'] # 비추
+iris.iloc[::25, 2:-1]
+
+# 6. species가 versicolor인 데이터의 모든 열
+iris[iris.species=='versicolor']
+iris[iris['species']=='versicolor']
+
+# 7. species가 setosa인 데이터 최초 5개 행만 출력
+iris[iris.species=='setosa'].head()
+iris[iris.species=='setosa'].iloc[:5]
+
+# 8. sepal_length가 6.5이상인 데이터 최초 5개 행만 출력
+iris[iris.sepal_length>=6.5].head()
+iris[iris.sepal_length>=6.5].iloc[:5]
+
+# 9. sepal_length가 7.2이상인 데이터의 'sepal_length'와 'sepal_width'와 'petal_length'
+iris.loc[iris.sepal_length >= 7.2, 'sepal_length':'petal_length']
+iris[iris.sepal_length >= 7.2][['sepal_length','sepal_width','petal_length']]
+
+# 10. versicolor종중에서 sepal_length가 6.5보다 큰 데이터의 모든 열
+iris[ (iris.species=='versicolor') & (iris.sepal_length>6.5)]
+import numpy as np
+iris[ np.logical_and(iris.species=='versicolor', iris.sepal_length>6.5) ]
