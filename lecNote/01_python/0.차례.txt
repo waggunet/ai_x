@@ -10,8 +10,9 @@
 10. N차원 배열 다루기 ★
 11. 데이터프레임과 시리즈 ★
 12. 데이터 시각화
-13. 웹 데이터 수집(웹크롤링)
-14. 데이터베이스 연동
+13. 총괄예제
+14. 웹 데이터 수집(웹크롤링)
+15. 데이터베이스 연동
 
 (https://www.inflearn.com/community/questions/744555/nbextensions-%EC%9D%98-table-of-contents-%EA%B4%80%EB%A0%A8-%EB%AC%B8%EC%9D%98-%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4?srsltid=AfmBOornuibZWXwz7BLnKxcpAb1xtevj1YujcOpiN86bUM4wRa5iToZt)
 https://mintrin.tistory.com/74 참조

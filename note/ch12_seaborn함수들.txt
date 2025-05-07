@@ -1,22 +1,33 @@
-1) 데이터 준비
-2) 미적속성 설정 - sns.set(style='darkgrid',
-		         contect='notebook', 배율
-		sns.set_style...
+1) 데이터준비
+2) 미적속성설정 - sns.set(style='darkgrid',
+                                context='notebook', 배율
+                       sns.set_style...
 
 3) 그래프 함수
-ⓐ 관계형 그래프 : scatterplot, lineplot = > relplot(서브플롯)
+ⓐ관계형그래프 : scatterplot, lineplot => relplot(서브플롯)
 
-
-ⓑ 범주형 그래프
-       stripplot(무작위 흩뿌림), swapmplot(겹치치않는 산점도)
-       barplot, barhplot(y의 평균으로 막대그래프), pointplot(y의 평균으로 line을 그림)
+ⓑ범주형그래프
+       stripplot(무작위 흩뿌림), swarmplot(겹치지않는산점도)
+       barplot, barhplot(y의 평균으로 막대그래프), pointplot(y의 평균으로 line)
        countplot(count는 x의 빈도수가 높이)
        boxplot, violinplot, boxenplot
        => catplot(서브플롯)
-
-ⓒ 쌍관계 그래프 :  모든 수치형 변수에 대해 산점도
-
-ⓓ 밀도 그래프 : histplot, displot
-ⓔ 회귀 그래프 : regplot = > lmplot(서브플롯)
+ⓒ 쌍관계 그래프 : 모든 수치형 변수에 대해 산점도
+ⓓ 밀도그래프 : histplot, displot
+ⓔ 회귀그래프 : regplot => lmplot(서브플롯)
 
 4) 다중 그래프를 위한 FacetGrid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
