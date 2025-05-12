@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title> 
+    <style>
+        table {background-color:#000000 /* 검정색 */}
+        tr {background-color:#ffffff /* 하얀색*/}
+        td{
+            padding:5px 10px; /* 안여백 : 위, 오른쪽, 아래, 왼쪽 */
+            width:150px; /* 가로사이즈 */
+            text-align:center; /* 글씨 가운데 정렬 */
+        }
+    </style>
+
+</head>
+<body>
+    <table>
+        <caption>병합이 없는 기본 테이블</caption>
+        <tr>
+            <th>1행1열</th>
+            <th>1행2열</th>
+            <th>1행3열</th>
+            <th>1행4열</th>
+        </tr>
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+            <td>2행3열</td>
+            <td>2행4열</td>
+        </tr>
+        <tr>
+            <td>3행1열</td>
+            <td>3행2열</td>
+            <td>3행3열</td>
+            <td>3행4열</td>
+        </tr>
+    </table>
+    <table>
+        <caption>병합이 있는 기본 테이블</caption>
+        <tr>
+            <td>1행1열</td>
+            <td>1행2열</td>
+            <td>1행3열</td>
+            <td>1행4열</td>
+        </tr>
+        <tr>
+            <td>2행1열</td>
+            <td colspan="3">2행 2열, 3열, 4열</td>
+        </tr>
+        <tr>
+            <td>3행1열</td>
+            <td colspan="2">3행2열, 3열</td>
+            <td>3행4열</td>
+        </tr>
+        <table>
+            <caption>열병합이 있는 기본 테이블</caption>
+            <tr>
+                <td rowspan="2">1행1열, 2행 1열</td>
+                <td>1행2열</td>
+                <td>1행3열</td>
+                <td>1행4열</td>
+            </tr>
+            <tr>
+                
+                <td>2행2열</td>
+                <td>2행3열</td>
+                <td>2행4열</td>
+            </tr>
+            <tr>
+                <td>3행1열</td>
+                <td>3행2열</td>
+                <td>3행3열</td>
+                <td>3행4열</td>
+            </tr>
+        </table>
+    </table>
+</body>
+</html>
