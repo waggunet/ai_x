@@ -6,8 +6,9 @@ ch02
 목록태그      : ul-li, ol-li
 표태그         : table - tr - td/th 
 이미지태그 : img의 src 속성, alt 속성
-오디오태그
+오디오태그 :   audio
 
 ch03
-form태그
-공간분할태그
+form태그 : form -  다양한 type:text, password, tell, number, file, date, hidden, submit, button
+block 형 태그 vs inline형 태그
+공간분할태그 : div, 시멘틱태그
