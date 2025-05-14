@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 개발자 양성과정 레이아웃</title>
+    <style>
+        /* 전체 페이지 스타일 */
+        body {
+            font-family: 'Malgun Gothic', sans-serif; /* 맑은 고딕 또는 기본 sans-serif 폰트 사용 */
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* 페이지 배경색 (이미지 바깥쪽) */
+            display: flex;
+            justify-content: center; /* 전체 컨테이너를 페이지 중앙에 배치 */
+        }
+
+        /* 전체 레이아웃을 감싸는 컨테이너 */
+        .container {
+            width: 1000px;
+            margin-top: 20px; /* 위쪽 여백 */
+            margin-bottom: 20px; /* 아래쪽 여백 */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 컨테이너 그림자 효과 */
+        }
+
+        /* 공통 섹션 스타일 (header, content, footer 내부의 열) */
+        .section {
+            display: flex; /* flexbox를 사용하여 내부 요소들을 가로로 배치 */
+            border-bottom: 1px solid #ccc; /* 섹션 하단 구분선 */
+        }
+
+            .section:last-child {
+                border-bottom: none; /* 마지막 섹션의 하단 구분선 제거 */
+            }
+
+        .column {
+            padding: 15px; /* 모든 컬럼 내부 여백 */
+            box-sizing: border-box; /* padding과 border가 width/height에 포함되도록 설정 */
+            background-color: #e9e9e9; /* 컬럼 기본 배경색 (이미지 회색 영역) */
+            border-right: 1px solid #dcdcdc; /* 컬럼 오른쪽 구분선 */
+        }
+
+            .column:last-child {
+                border-right: none; /* 마지막 컬럼의 오른쪽 구분선 제거 */
+            }
+
+        /* 각 컬럼의 너비 설정 */
+        .left {
+            width: calc(1000px - 693px - 150px); /* 1000px - center - right */
+            /* 이미지 상으로는 left가 비어있거나 매우 좁아보이지만, 일관성을 위해 계산된 너비를 할당합니다.
+               만약 left가 항상 비어있다면 width: auto 또는 flex-grow: 1 등으로 다르게 처리할 수 있습니다.
+               여기서는 이미지의 빨간색 가이드라인을 기준으로 계산했습니다.
+               1000 - 693 - 150 = 157px */
+            width: 157px;
+        }
+
+        .center {
+            width: 693px;
+        }
+
+        .right {
+            width: 150px;
+        }
+
+        /* Header 스타일 */
+        #header {
+            /* 헤더 높이는 내용에 따라 자동 조절 */
+        }
+
+            #header .center {
+                display: flex;
+                justify-content: center; /* 메뉴 아이템 중앙 정렬 */
+                align-items: center; /* 수직 중앙 정렬 */
+            }
+
+            #header nav ul {
+                list-style: none; /* ul의 기본 점 제거 */
+                padding: 0;
+                margin: 0;
+                display: flex; /* 메뉴 아이템들을 가로로 나열 */
+            }
+
+                #header nav ul li {
+                    margin: 0 20px; /* 메뉴 아이템 사이 간격 */
+                    font-size: 1.2em; /* 메뉴 폰트 크기 */
+                    font-weight: bold;
+                }
+
+                    #header nav ul li a {
+                        text-decoration: none; /* 링크 밑줄 제거 */
+                        color: #333; /* 링크 색상 */
+                    }
+
+                        #header nav ul li a:hover {
+                            color: #007bff; /* 링크 호버 색상 */
+                        }
+
+
+        /* Content 스타일 */
+        #content {
+            height: 300px; /* 고정 높이 설정 */
+        }
+
+            #content .center {
+                display: flex;
+                flex-direction: column; /* 내부 요소들을 세로로 배치 */
+                align-items: center; /* 가로 중앙 정렬 */
+                justify-content: center; /* 세로 중앙 정렬 (내용이 적을 경우) */
+                text-align: center; /* 텍스트 중앙 정렬 */
+            }
+
+                #content .center h1 {
+                    font-size: 2.2em;
+                    color: #222;
+                    margin-top: 0; /* 제목 위쪽 여백 제거 */
+                    margin-bottom: 20px; /* 제목과 문단 사이 간격 */
+                }
+
+                #content .center p {
+                    font-size: 1em;
+                    line-height: 1.6; /* 줄 간격 */
+                    color: #555;
+                    max-width: 80%; /* 문단 최대 너비 제한 */
+                }
+
+            #content .right {
+                padding-top: 10px; /* 오른쪽 목록 위쪽 여백 */
+            }
+
+                #content .right ol {
+                    list-style-type: decimal; /* 숫자 목록 스타일 */
+                    padding-left: 20px; /* 목록 왼쪽 여백 */
+                    margin: 0;
+                    font-size: 0.9em;
+                }
+
+                    #content .right ol li {
+                        margin-bottom: 8px; /* 목록 아이템 간 간격 */
+                        color: #444;
+                    }
+
+                        /* 이미지에서 빨간색으로 강조된 항목들 스타일 */
+                        #content .right ol li.highlight-red {
+                            color: red;
+                            font-weight: bold;
+                        }
+
+
+        /* Footer 스타일 */
+        #footer {
+            height: 150px; /* 고정 높이 설정 */
+        }
+
+            #footer .column {
+                /* 푸터 컬럼에 특별한 스타일이 필요하면 여기에 추가 */
+                display: flex;
+                align-items: center; /* 푸터 내용 수직 중앙 정렬 */
+                justify-content: center; /* 푸터 내용 수평 중앙 정렬 */
+                color: #666;
+            }
+
+        /* 비어있는 left, right 컬럼의 경우 내용이 없도록 처리 */
+        .empty-column-visual { /* 시각적으로 비어있음을 나타내는 클래스 (선택사항) */
+            background-color: #e0e0e0; /* 약간 더 어두운 회색으로 비어있음을 표시 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header id="header" class="section">
+            <div class="column left empty-column-visual">
+            </div>
+            <div class="column center">
+                <nav>
+                    <ul>
+                        <li><a href="#">menu1</a></li>
+                        <li><a href="#">menu2</a></li>
+                        <li><a href="#">menu3</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="column right empty-column-visual">
+            </div>
+        </header>
+
+        <main id="content" class="section">
+            <div class="column left empty-column-visual">
+            </div>
+            <div class="column center">
+                <h1>AI 개발자 양성과정</h1>
+                <p>그들의 위하여서, 들어 인생을 사막이다. 커다란 대고, 타오르고 무엇을 못하다 트고, 풍부하게 그리하였는가? 보내는 힘차게 간에 위하여 붙이는 것이다.</p>
+            </div>
+            <div class="column right">
+                <ol>
+                    <li>태그</li>
+                    <li>전체(*)</li>
+                    <li>id, class</li>
+                    <li>속성</li>
+                    <li>후손, 자손(>)</li>
+                    <li>동위</li>
+                    <li>반응</li>
+                    <li>상태</li>
+                    <li>구조</li>
+                    <li class="highlight-red">문자</li>
+                    <li class="highlight-red">링크</li>
+                    <li class="highlight-red">부정</li>
+                </ol>
+            </div>
+        </main>
+
+        <footer id="footer" class="section">
+            <div class="column left empty-column-visual">
+            </div>
+            <div class="column center">
+                Footer Center Content
+            </div>
+            <div class="column right empty-column-visual">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

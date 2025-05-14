@@ -1,0 +1,58 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap {
+            width: 600px;
+            margin: 0 auto; /*wrap을 가운데 정렬*/
+            border: 1px solid #999999;
+        }
+
+            #wrap > #header { /* > : 자손선택자*/
+                overflow: hidden; /*수평으로 하고 싶은 태그부모단*/
+            }
+
+            #wrap .logo { /* space : 후손선택자 */
+                float: left;
+                padding: 10px 30px 10px 150px;
+            }
+
+            #wrap .title {
+                float: left;
+                padding: 20px 150px 10px 30px;
+            }
+
+        div p { /* 후손 선택자(자손선택자 포함)*/
+            font-size: 24px;
+        }
+
+        div > p { /*자손선택자*/
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo"><h1>LOGO</h1></div>
+            <div class="title"><h2>OO주식회사</h2></div>
+        </div>
+        <div id="content">
+            <p>
+                국가원로자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 사회적 특수계급의 제도는 인정되지 아니하며, 어떠한 형태로도 이를 창설할 수 없다. 광물 기타 중요한 지하자원·수산자원·수력과 경제상 이용할 수 있는 자연력은 법률이 정하는 바에 의하여 일정한 기간 그 채취·개발 또는 이용을 특허할 수 있다. 정당의 설립은 자유이며, 복수정당제는 보장된다. 국무총리는 국회의 동의를 얻어 대통령이 임명한다. 군인은 현역을 면한 후가 아니면 국무위원으로 임명될 수 없다. 이 헌법중 공무원의 임기 또는 중임제한에 관한 규정은 이 헌법에 의하여 그 공무원이 최초로 선출 또는 임명된 때로부터 적용한다.
+            </p>
+            <ul>
+                <li><p>여기 content밑에 ul밑에 li 밑에 p</p></li>
+                <li><p>여기 content밑에 ul밑에 li 밑에 p</p></li>
+                <li><p>여기 content밑에 ul밑에 li 밑에 p</p></li>
+            </ul>
+        </div>
+        <div id="footer">
+            <p>주소</p>
+        </div>
+    </div>
+</body>
+</html>
