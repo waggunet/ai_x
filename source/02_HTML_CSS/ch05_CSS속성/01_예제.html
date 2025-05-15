@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 속성 예제 캔버스</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .example-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 속성 예제</h1>
+
+    <h2>1. CSS3 단위</h2>
+    <div class="example-box" style="font-size: 2em;">2em 크기</div>
+    <div class="example-box" style="width: 50%; background: #eef;">50% 너비</div>
+    <div class="example-box" style="padding: 20px; background: #fef;">20px 패딩</div>
+
+    <h2>2. url() 함수 사용</h2>
+    <div class="example-box" style="background-image: url('example.jpg'); height: 100px; background-size: cover;">배경 이미지</div>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('CustomFont.woff2') format('woff2');
+        }
+    </style>
+    <div class="example-box" style="font-family: 'CustomFont', sans-serif;">로컬 폰트 적용</div>
+
+    <h2>3. display 속성</h2>
+    <span class="example-box" style="display: inline; background: #cfc;">inline</span>
+    <div class="example-box" style="display: block; background: #ccf;">block</div>
+    <div class="example-box" style="display: inline-block; background: #ffc;">inline-block</div>
+
+    <h2>4. visibility</h2>
+    <div class="example-box" style="visibility: visible;">보임</div>
+    <div class="example-box" style="visibility: hidden;">숨김</div>
+    <div class="example-box" style="visibility: collapse;">collapse (테이블 전용)</div>
+
+    <h2>5. opacity</h2>
+    <div class="example-box" style="opacity: 0; background: #fdd;">0</div>
+    <div class="example-box" style="opacity: 0.5; background: #fbb;">0.5</div>
+    <div class="example-box" style="opacity: 1; background: #f99;">1</div>
+
+    <h2>6. margin과 padding</h2>
+    <div class="example-box" style="margin: 20px; background: #def;">margin</div>
+    <div class="example-box" style="padding: 20px; background: #fde;">padding</div>
+    <div class="example-box" style="margin: 10px; padding: 10px; background: #dfd;">둘 다 적용</div>
+
+    <h2>7. box-sizing</h2>
+    <div class="example-box" style="box-sizing: content-box; width: 100px; padding: 10px; border: 5px solid black;">content-box</div>
+    <div class="example-box" style="box-sizing: border-box; width: 100px; padding: 10px; border: 5px solid black;">border-box</div>
+
+    <h2>8. 글자 관련 속성</h2>
+    <div class="example-box" style="font-family: Arial, sans-serif;">font-family</div>
+    <div class="example-box" style="font-size: 18px;">font-size</div>
+    <div class="example-box" style="font-weight: bold; font-style: italic; line-height: 1.5; text-align: center; text-decoration: underline;">복합 글자 스타일</div>
+
+    <h2>9. 폰트 종류</h2>
+    <div class="example-box" style="font-family: 'Roboto', sans-serif;">웹폰트</div>
+    <div class="example-box" style="font-family: 'CustomFont', sans-serif;">로컬 폰트</div>
+    <div class="example-box" style="font-family: system-ui;">시스템 폰트</div>
+
+    <h2>10. position</h2>
+    <div class="example-box" style="position: static;">static</div>
+    <div class="example-box" style="position: relative; top: 10px; left: 10px; background: #ffd;">relative</div>
+    <div class="example-box" style="position: absolute; top: 0; right: 0; background: #ddf;">absolute</div>
+
+    <h2>11. float</h2>
+    <div style="overflow: hidden;">
+        <div class="example-box" style="float: left; width: 40%; background: #faa;">float left</div>
+        <div class="example-box" style="float: right; width: 40%; background: #aaf;">float right</div>
+    </div>
+    <div class="example-box" style="float: none; clear: both; background: #eee;">float none</div>
+
+</body>
+</html>

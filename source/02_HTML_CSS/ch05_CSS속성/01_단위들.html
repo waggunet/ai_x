@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            width:600px; margin:0 auto;
+            border:1px solid gray;
+            text-align:justify;
+            padding:10px;
+        }
+            #wrap p:nth-child(2n) {
+                background-color: lightblue;
+            }
+        /* em (원 글씨크기의 몇배), %(글씨크기 및 width, height, px, pt(3pt가 4px)
+           pxtoem(https://pxtoem.com.au/)
+           pxtopt(http://pixelsconverter.com/px-to-pt)
+        */
+        #wrap p > span{
+            display:block; /* dispaly 속성을 block으로 수정하면 block형 태그로 전환 */
+            color:gray;
+            font-size: 0.5em;
+        }
+        #wrap p:nth-child(1){
+            font-size: .8em /* 원래 사이즈의 0.8배 */
+        }
+        #wrap p:nth-child(2){
+            font-size: 100% /* 문자의 경우 원래 사이즈의 몇% 
+                /* 
+                width, height padding, margin.. 등 길이의 경우 : 부모 길이의 몇 % 
+            */
+        }
+        #wrap p:nth-child(3){
+            font-size:32px; /* p 태그의 기본 사이즈가 16px */
+        }
+            #wrap p:nth-child(4) {
+                font-size: 24pt; /* 3pt(글씨포인트 단위)가 4px */
+            }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <span> 입력 2025.05.15 08:15</span>
+        </p>         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <span> 입력 2025.05.15 08:15</span>
+        </p>         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <span> 입력 2025.05.15 08:15</span>
+        </p>         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <span> 입력 2025.05.15 08:15</span>
+        </p> 
+
+
+    </div>
+</body>
+</html>
