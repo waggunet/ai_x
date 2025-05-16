@@ -1,0 +1,25 @@
+﻿/* css/footer.css */
+footer{
+    width:1000px;
+    margin:10px auto 0 auto;
+    overflow:hidden;
+}
+    footer div:nth-child(1),
+    footer div:nth-child(2),
+    footer div:nth-child(3) {
+        float: left;
+        width: 33.3%;
+        border: 1px solid gray;
+        box-sizing:border-box;
+        height:100px;
+        margin-bottom:5px;
+    }
+    footer div:last-child{
+        clear:both; /* 앞의 float 속성을 clear */
+        background-color:black;
+        color:white;
+        height:50px;
+        line-height:50px;
+        text-align:center;
+    }
+

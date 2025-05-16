@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹서비스개발</title>
+    <link rel="stylesheet" href="웹서비스개발.css">
+</head>
+<body>
+    <div id="wrap">
+        <nav>
+            <div id="nav_left">
+                <ul>
+                    <li><a href="#">LOGO</a></li>
+                    <li><a href="#">참여하기</a></li>
+                    <li><a href="#">개설하기</a></li>
+                    <li><a href="#">검색하기</a></li>
+                </ul>
+            </div>
+            <div id="nav_right">
+                <ul>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                    <li><a href="#">홍길동님</a></li>
+                </ul>
+            </div>
+            <div id="nav_bottom">
+                <ul>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="content">
+            <div id="title">
+            </div>
+            <div id="lnb">
+                <ul>
+                    <li><a href="#">나의여행</a></li>
+                    <li><a href="#">참여여행</a></li>
+                    <li><a href="#">관심여행</a></li>
+                    <li class="selected"><a href="#">개인정보변경</a></li>
+                    <li><a href="#">비밀번호변경</a></li>
+                </ul>
+            </div>
+            <div id="my_content">
+                <div id="sub_title">개인정보변경</div>
+                <div id="modify">
+                    <form action="#" method="post">
+                        <table>
+                            <tr>
+                                <td><label for="name">이름</label></td>
+                                <td><input type="text" id="name" name="name" value="조명환"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="userid">아이디</label></td>
+                                <td><input type="text" id="userid" name="userid" value="Alan Jo"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">이메일</label></td>
+                                <td><input type="email" id="email" name="email" value="jo@waggu.net"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="phone">전화</label></td>
+                                <td><input type="text" id="phone" name="phone" value="010-2331-1234"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="birthdate">생년월일</label></td>
+                                <td><input type="text" id="birthdate" name="birthdate" value="2000-10-11"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="address">주소</label></td>
+                                <td><input type="text" id="address" name="address" value="서울시 구로구"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align:center;">
+                                    <input type="submit" value="저장">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+</html>

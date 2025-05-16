@@ -1,0 +1,100 @@
+﻿/* css/header.css :페이지 초기화, header 부분 */
+@font-face {
+    font-family: 'erriweather-Light';
+    src: url('../font/Merriweather-Light.ttf');
+}
+@font-face {
+    font-family: 'Merriweather-Regular';
+    src: url('../font/Merriweather-Regular.ttf');
+}
+*{
+    margin:0; padding:0;
+
+}
+a{
+    text-decoration:none;
+    color:black;
+    display:block; /* a태그를 block타입으로 변경하여 영역 확장 */
+}
+li{list-style:none;}
+
+/* 페이지 초기화는 여기까지, 바디 잡고 다음에 해야할 일 */
+/* *** header 부분 *** */
+/* *** header .gnb부분 *** */
+header {
+    font-family: Merriweather-Regular;
+}
+header .gnb{
+    min-width:1000px;
+    background-color:black; /* width : 100% */
+    overflow:hidden;
+}
+header .gnb ul{
+    width:1000px; margin:0 auto;
+/*    border:1px solid yellow;  확인용으로 확인 후 삭제 */
+        }
+header .gnb ul li{
+    float:left;
+    width:8%; margin:0 1%;
+ /*  width:8%; margin:0 1%; */
+ /*    border:1px solid red; 확인용으로 확인 후 삭제 */
+    box-sizing: border-box;
+    text-align:center;
+    line-height:30px;
+}
+header .gnb a{
+    color:white;
+}
+/* *** header .logo 부분 *** */
+header .logo {
+    width: 100px; margin: 30px auto; /* 밖여백 */
+    boarder: 1px solid gray;
+    
+    text-align: center;
+    padding: 15px 20px; /* 안여백 */
+
+    font-size: 2em;
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+}
+/* *** header .hitmenu 부분 *** */
+header .hitmenu ul{
+    width:1000px; margin:0 auto 3px;
+    overflow:hidden;
+}
+    header .hitmenu ul li {
+        float: right;
+        border: 1px solid gray;
+        /*         width: 100px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center; */
+    }
+header .hitmenu ul li a{padding:10px 30px;}
+
+header .hitmenu ul li:first-child {
+    border-radius: 0 10px 10px 0;
+}
+header .hitmenu ul li:last-child {
+    border-radius: 10px 0 0 10px;
+    }
+
+    /* *** header .lnb 부분 *** */
+header .lnb{
+    border-top:1px dashed black;
+    border-bottom: 1px dashed black;
+}
+    header .lnb ul {
+        width:1000px;
+        margin:0 auto;
+        overflow:hidden;
+    }
+        header .lnb ul li {
+            float: left;
+            /* menu 하나당 12.5 */
+            width: 10.5%;
+            margin: 0 1%;
+            /*  width:8%; margin:0 1%; */
+            line-height: 30px;
+            text-align: center;
+        }
