@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body{
+            background-color:orange;
+        }
+        div{
+            background-color:red;
+            display:none; /* 공간도 화면에서 사라짐 */
+        }
+        #toggle:checked ~ div{display:block;}
+        #toggle {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle" />
+    <p>
+        중간에 내용이 많아도 상관없어요
+            </p>
+    <label for="toggle">
+        <img src="img/menu.png"/>
+    </label>
+    <p>
+        중간에 내용이 많아도 상관없어요
+    </p>
+    <div>
+        토글부분(메뉴)가 나타났다 사라졌다 하는 부분 
+    </div>
+</body>
+</html>
