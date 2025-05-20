@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+            body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* 요소들을 수직으로 정렬 */
+            align-items: center; /* 가로축 중앙 정렬 */
+            margin-top: 20px;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            text-align: center; /* 내부 요소들 중앙 정렬 */
+        }
+        .input-group {
+            margin-bottom: 15px;
+            display: flex; /* 레이블과 인풋을 가로로 배열 */
+            align-items: center; /* 세로축 중앙 정렬 */
+            justify-content: center; /* 가로축 중앙 정렬 */
+        }
+        .input-group label {
+            display: inline-block;
+            width: 100px; /* 레이블 너비 고정 */
+            text-align: left; /* 레이블 텍스트 왼쪽 정렬 */
+            margin-right: 10px;
+        }
+        .input-group input[type="text"] {
+            width: 80px; /* 입력 필드 너비 */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center; /* 입력값 중앙 정렬 */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #555; /* 이미지와 유사한 버튼 색상 */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 20px; /* 결과 메시지와의 간격 */
+        }
+        button:hover {
+            background-color: #333;
+        }
+        #resultMessage {
+            font-size: 20px; /* 이미지와 유사한 폰트 크기 */
+            font-weight: bold;
+            color: #333;
+            min-height: 30px; /* 메시지가 없을 때도 공간 유지 */
+        }
+        /* 페이지 제목 스타일 (선택 사항) */
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        } 
+    </style>
+    <script>
+        function compareNumbers() {
+            const num1Input = document.getElementById('num1');
+            const num2Input = document.getElementById('num2');
+            const resultDiv = document.getElementById('resultMessage');
+
+            const val1 = num1Input.value;
+            const val2 = num2Input.value;
+
+            // 1. 입력값 체크 (빈 값인지 확인)
+            if (val1.trim() === '' || val2.trim() === '') {
+                resultDiv.textContent = '두 수를 모두 입력해주세요.';
+                return; // 함수 종료
+            }
+
+            const number1 = Number(val1);
+            const number2 = Number(val2);
+
+            // 2. 숫자인지 체크 (제대로 입력 받았는지)
+            // isNaN은 빈 문자열이나 공백만 있는 문자열을 0으로 변환하므로, 위에서 trim() === '' 체크가 선행되면 좋음.
+            if (isNaN(number1) || isNaN(number2)) {
+                resultDiv.textContent = '유효한 숫자를 입력해주세요.';
+                return; // 함수 종료
+            }
+
+            // 3. 비교 및 메시지 표시
+            let message = '';
+            const diff = Math.abs(number1 - number2); // 두 수의 차이 절대값
+
+            if (number1 > number2) {
+                message = `첫 번째 수가 ${diff} 큽니다.`;
+            } else if (number2 > number1) {
+                message = `두 번째 수가 ${diff} 큽니다.`;
+            } else {
+                message = '두 수가 같습니다.';
+            }
+
+            resultDiv.textContent = message;
+
+            // 문제의 이미지에 있는 작은 alert 창을 표시하려면 아래 주석을 해제합니다.
+            // alert(message.replace(" 큽니다.", "만큼 더 큽니다.").replace("같습니다.", "서로 같습니다."));
+            // 예시 이미지의 alert는 "두번째 수가 10만큼 더 크다"로 되어 있어, 필요시 위와 같이 메시지를 조정할 수 있습니다.
+            // 하지만 주된 결과 표시는 페이지 내 #resultMessage에 하는 것으로 구현했습니다.
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="input-group">
+            <label for="num1">첫 번째 수</label>
+            <input type="text" id="num1" value="20">
+        </div>
+
+        <div class="input-group">
+            <label for="num2">두 번째 수</label>
+            <input type="text" id="num2" value="30">
+        </div>
+
+        <button onclick="compareNumbers()">결과</button>
+
+        <div id="resultMessage"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        body{
+            text-align: center ;
+            width: 400px;
+            height: 150px;
+            margin: 100px auto;
+            border: 1px solid gray;
+        }
+        #label{
+            margin-top: 35px;
+        }
+    </style>
+    <script>
+    document.getElementById('btn').addEventListener('click', function(e) {
+      e.preventDefault();  // submit 방지
+
+      const v1 = document.getElementById('num1').value.trim();
+      const v2 = document.getElementById('num2').value.trim();
+      const a = Number(v1);
+      const b = Number(v2);
+
+      // 3항 연산자로 입력 검증 → 비교 → 동등까지 한 줄에 처리
+      const msg = (v1 === '' || v2 === '' || isNaN(a) || isNaN(b))
+        ? '숫자를 제대로 입력하세요!'
+        : (a > b)
+          ? '첫번째 수가 더 큽니다'
+          : (a < b)
+            ? '두번째 수가 더 큽니다'
+            : '두 수가 같습니다';
+
+      alert(msg);
+    });    
+    </script>
+</head>
+<body>
+    <div id="label">
+<label>첫번째 수: <input id="num1" type="text" /></label><br>
+<label>두번째 수: <input id="num2" type="text" /></label><br>
+<button id="btn">결과</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        const hour = new Date().getHours();
+//        document.write(hour);
+// 0-6시 새벽그림 7-17 낮그림 18-23시 밤그림
+    if(hour <= 6){
+        document.write('<h1>조용한 새벽입니다.</h>')
+        document.write('<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTAyMjBfMjg1%2FMDAxNzM5OTk4OTk4ODU5.b89-tDmJP95zOKqhWnm5P1JGXyE7hb_-A7LLQpdmxckg.wxleoLGeZzisWQTPPeOJJveBbgadMBVS0c1x_hRBy3sg.JPEG%2F%25BB%25F5%25BA%25AE.jpg&type=a340"')
+        }else if(7<=hour && hour<=17){
+        document.write('<h1>신나는 낮입니다.</h>')
+        document.write('<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MThfMjI2%2FMDAxNzEzNDIyMjQ4NjM5.xV9TgslQW6_1SO_sQ6f6QGKb8QxwZZ1z-JOtKS8TsTUg.ZU5f8KNbEejzOrodyf9ZPf9Au0045VYSw67nmWAcGukg.JPEG%2F%25BB%25F3%25C7%25D8_%25BF%25A9%25C7%25E0_%25C7%25CA%25BC%25F6_%25C4%25DA%25BD%25BA_%25BF%25B9%25BF%25F8_%25BE%25DF%25B0%25E6_%25B3%25B7_%25B9%25E3_%25C1%25A4%25BF%25F8_%25BF%25EE%25BF%25B5_%25BD%25C3%25B0%25A3_%25C0%25D4%25C0%25E5%25B7%25E1_%25C6%25F7%25C5%25E4%25BD%25BA%25C6%25CC_%25C6%25F7%25C5%25E4%25C1%25B8_%25C0%25CE%25BB%25FD%25BC%25A6_5%25BF%25F9_%25BB%25F3%25C7%25CF%25C0%25CC_%25BF%25A9%25C7%25E0_%25B3%25AF%25BE%25BE_%252811%2529.jpg&type=a340"')
+        }else{
+        document.write('<h1>휴식이 필요한 밤입니다.</h>')
+        document.write('<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAxMTVfMTUg%2FMDAxNTc5MDI0NDUzMjQz.dAbRyo3VUUcQxUO8oi_09wEw0wABkg08pE_g7UC_6_kg.urfHTWXsDHypYX137KztiuVyEThdlNL0J9FjI0M3jL4g.JPEG.byeldul%2F%25BF%25EC%25C1%25D6%25C0%25CE%25B9%25AE.jpg&type=a340"')    
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
