@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+     table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-family: '맑은 고딕', sans-serif;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #f0f0f0;
+    }
+    tr:nth-child(even) td {
+      background: #fafafa;
+    }
+    </style>
+    <script>
+    // 테이블 열 제목(2단~9단)
+    document.write('<table>');
+    document.write('<thead><tr><th> </th>');
+    for (let dan = 2; dan <= 9; dan++) {
+      document.write(`<th>${dan}단</th>`);
+    }
+    document.write('</tr></thead>');
+
+    // 본문: 1~9 곱하기 수
+    document.write('<tbody>');
+    for (let i = 1; i <= 9; i++) {
+      document.write('<tr>');
+      document.write(`<th>${i}</th>`); // 왼쪽에 행 제목
+      for (let j = 2; j <= 9; j++) {
+        document.write(`<td>${j} × ${i} = ${j * i}</td>`);
+      }
+      document.write('</tr>');
+    }
+    document.write('</tbody>');
+    document.write('</table>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

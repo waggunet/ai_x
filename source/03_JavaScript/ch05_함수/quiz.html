@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Image Quiz</title>
+  <style>
+    body{
+      background-image: url(ch05_img/img01.png);
+      background-size: 100%;
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #timeDisplay {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #ffffff;
+      font-size: 24px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+  <div id="timeDisplay"></div>
+
+  <script>
+    const images = [
+      'ch05_img/img01.png',
+      'ch05_img/img02.png',
+      'ch05_img/img03.png',
+      'ch05_img/img04.png',
+      'ch05_img/img05.png',
+      'ch05_img/img06.png',
+      'ch05_img/img07.png',
+      'ch05_img/img08.png',
+      'ch05_img/img09.png',
+      'ch05_img/img10.png'
+    ];
+    let index = 0;
+    const display = document.getElementById('timeDisplay');
+    const intervalId = setInterval(() => {
+      const now = new Date();
+      display.textContent = now.toLocaleTimeString();
+      document.body.style.backgroundImage = `url(${images[index]})`;
+      index++;
+      if (index >= images.length) {
+        clearInterval(intervalId);
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

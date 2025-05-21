@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        /* 한 줄(행) 당 간격 */
+    p.gugudan-row {
+      margin: 8px 0;
+      line-height: 1.4;
+    }
+    /* 각 칸(span) 스타일 */
+    span.gugu-cell {
+      display: inline-block;
+      width: 100px;
+      padding: 8px 2px;
+      margin: 2px;
+      background: #fff1fd;
+      border-radius: 4px;
+      text-align: center;
+      font-family: '맑은 고딕', sans-serif;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    </style>
+    <script>
+        // 2~9단까지 구구단 (p태그와 span 태그 이용 / table)
+    for (let i = 1; i <= 9; i++) {
+      // p 태그 열기
+      document.write('<p class="gugudan-row">');
+      
+      // 2단부터 9단까지 span으로 출력
+      for (let j = 2; j <= 9; j++) {
+        document.write(
+          `<span class="gugu-cell">${j} × ${i} = ${j * i}</span>`
+        );
+      }
+      
+      // p 태그 닫기
+      document.write('</p>');
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
