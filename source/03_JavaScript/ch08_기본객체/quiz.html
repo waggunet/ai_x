@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    table {width:350px; margin:20px auto; padding:20px 10px;}
+    table, input[type='text'], input[type='password'] {
+      border: 1px solid #385d81;
+      outline: 1px solid #385d81;
+      padding: 2px;
+    }
+    input[type='submit'], input[type='reset'], input[type='button'], button{
+      background-color: #385d81;
+      border:0; outline:0;
+      color:white; 
+      border-radius: 3px;
+      padding:10px 20px;
+      margin:5px;
+    }
+    td, th { padding:5px 10px; text-align:center;}
+  </style>
+  <script>
+    var patternNum = /[0-9]/; // 숫자 패턴 (test함수 사용)
+    var patternEng = /[a-zA-Z]/; // 영문자패턴 
+    var patternSpc = /[~`!@#$%^&*()_\-+=\|\\\[\]{}'":;?\/<>,\.]/; // 특수문자 정규표현식
+    var patternName = /^[a-zA-Z가-힣]{2,}$/ // 이름패턴(match 함수 이용)
+    var patternMail = /^[a-zA-Z0-9\.]+@[a-zA-Z0-9]+(\.[a-z]+){1,2}$/; // macth함수 사용
+    const joinCheck = ()=>{
+      let name = frm.name.value.trim();
+      let mail = frm.mail.value.trim();
+      let pw   = frm.pw.value.trim();
+      var pwchk = frm.pwChk.value.trim();
+      // if(!name.match(patternName)){
+      //   alert('이름을 확인하세요. 2글자 이상의 한글이나 영문이 와야 합니다');
+      //   frm.name.focus();
+      //   return false;
+      // }
+      if(!name){
+        alert('이름은 필수 입력사항입니다');
+        frm.name.focus();
+        return false;
+      }else if(patternSpc.test(name) || patternNum.test(name)){
+        alert('이름을 확인하세요. 이름에는 특수문자나 숫자의 사용이 불가합니다');
+        frm.name.focus();
+        return false;
+      }else if(name.length<2){
+        alert('이름은 2글자 이상입니다');
+        frm.name.focus();
+        return false;
+      }else if(!mail){
+        alert('메일은 필수 입력사항입니다');
+        frm.mail.focus();
+        return false;
+      }else if(!mail.match(patternMail)){
+        alert(mail);
+        alert('메일 형식을 확인하세요');
+        frm.mail.focus();
+        return false;
+      // }else if(!patternMail.test(mail)){
+      //   alert('2방법.메일 형식을 확인하세요');
+      //   frm.mail.focus();
+      //   return false;    
+      }else if(!pw){
+        alert('비밀번호는 필수 입력 사항입니다');
+        frm.pw.focus();
+        return false;
+      }else if (pw != pwChk) {
+        alert('비밀번호가 일치하지 않습니다');
+        frm.pw.focus();
+        return false;
+      }else if (!patternNum.test(pw) ||
+                !patternEng.test(pw) ||
+                !patternSpc.test(pw) ||
+                pw.length < 4) {
+          alert('비밀번호에 숫자, 알파벳, 특수문자를 모두 포함한 4글자 이상입니다');
+          frm.pw.focus();
+          return false;
+      }// if
+      return true;
+    }// joinCheck
+  </script>
+</head>
+<body>
+  <form action="#" name="frm" onsubmit="return joinCheck()">
+    <table>
+      <tr>
+        <th>이름</th>
+        <td>
+          <input type="text" name="name" placeholder="특수문자와 숫자 못 와" 
+                        autofocus="autofocus"/>
+        </td>
+      </tr>
+      <tr>
+        <th>메일</th>
+        <td><input type="text" name="mail" placeholder="메일 형식에 맞추세요" /></td>
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <td><input type="password" name="pw" placeholder="특수문자,알파벳,숫자 포함" /></td>
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <td><input type="password" name="pwChk" /></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="회원가입" />
+          <input type="reset" value="취소" />
+          <input type="button" value="로그인" />
+        </td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>

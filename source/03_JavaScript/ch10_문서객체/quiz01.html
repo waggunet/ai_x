@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>퀴즈01</title>
+<style>
+  body {
+    transition: background-color 0.3s ease; 
+  }
+  table {
+    border-collapse: collapse;
+    margin: 50px auto;
+  }
+  td {
+    width: 50px;
+    height: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h2>quiz1: 마우스를 올리면 바탕화면도 해당 색상으로</h2>
+<table id="colorTable">
+  <tr>
+    <td data-color="red" style="background-color: red;"></td>
+    <td data-color="orange" style="background-color: orange;"></td>
+    <td data-color="yellow" style="background-color: yellow;"></td>
+    <td data-color="green" style="background-color: green;"></td>
+    <td data-color="blue" style="background-color: blue;"></td>
+    <td data-color="navy" style="background-color: navy;"></td>
+    <td data-color="purple" style="background-color: purple;"></td>
+  </tr>
+</table>
+
+<script>
+  const colors = ["red", "orange", "yellow", "green", "blue", "navy", "purple"];
+  const tableCells = document.querySelectorAll("#colorTable td");
+  const body = document.body;
+  const colorTable = document.getElementById("colorTable");
+
+  tableCells.forEach(cell => {
+      cell.addEventListener("mouseover", function() {
+      const cellColor = this.style.backgroundColor;
+      body.style.backgroundColor = cellColor; 
+    });
+  });
+
+
+  colorTable.addEventListener("mouseout", function() {
+    body.style.backgroundColor = "white";
+  });
+</script>
+
+</body>
+</html>

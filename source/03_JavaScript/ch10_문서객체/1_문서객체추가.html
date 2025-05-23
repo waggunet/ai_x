@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>INDEX</title>
+    <script>
+      window.onload = ()=>{
+      // 문서객체추가1: 1)h1태그생성 2)textNode생성 3)textNode를 h1에 연결 4)h1을 body에 연결
+        var h1 = document.createElement('h1');
+        var textNode = document.createTextNode("추가함");
+        h1.appendChild(textNode);
+        document.body.appendChild(h1);
+      // 문서객체추가2: 1)img태그생성 2)img의 속성변경 3)img를 body에 연결
+        var img = document.createElement('img');
+        img.setAttribute('src', 'img/red.jpg');
+        img.setAttribute("alt", "추가된 이미지");
+        document.body.appendChild(img);
+      // 문서객체추가3: innerHTML을 이용
+        document.body.innerHTML += '<h2>3번째 방법으로 추가</h2>';
+      };
+    </script>
+</head>
+<body>
+    <h1>TEXT NODE</h1>
+    <img src="img/orange.jpg" alt="오렌지" />
+</body>
+</html>

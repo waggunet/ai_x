@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <style>
+    body{
+      background-image: url('img/img03.png');
+      background-size: 100%;
+      color: #FFFF00;
+      font-size: 1.5em;
+    }
+  </style>
+  <script>
+    let sec = 0; // 몇 지났는지 저장할 변수
+    let color = ['#FFFF00', 'green', 'white'];
+    let image = ['url(img/img01.png)', 
+                'url(img/img02.png)',
+                'url(img/img03.png)'];
+    document.writeln(new Date().toLocaleString());
+    var timerId = setInterval(() => {
+      document.body.innerHTML = new Date().toLocaleString();
+      sec++;
+      document.body.innerHTML += '<p>' + sec + '초 지남</p>';
+      // document.body.style = 'background-image : ' + image[sec%image.length];
+      document.body.style.backgroundImage = image[sec%image.length];
+      document.body.style.color           = color[sec%image.length];
+    }, 1000);
+    setTimeout(()=>{clearInterval(timerId)},10000);
+  </script>
+</head>
+<body>
+</body>
+</html>

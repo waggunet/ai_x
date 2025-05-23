@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <script>
+    let name = '이순신';
+    let method = function(i){alert(i);};
+    let person = {
+      name:'이순신', 
+      age :20, 
+      eat : function(food){ // 메소드 내에서는 this 키워드 이용
+        var msg = this.age + '살' + this.name + '님은' + food + '를 먹는다';
+        alert(msg);
+      }, // eat 함수
+    }; // person 객체
+    document.write(person.name + '님 ' + person.age + '<br>');
+    document.write(person + '<br>');
+    document.write(person.toString() + '<br>');
+    person.eat('불고기');
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

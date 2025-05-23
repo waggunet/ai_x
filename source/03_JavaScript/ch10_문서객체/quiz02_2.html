@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Quiz2 - 메뉴 (새 창)</title>
+<style>
+  body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  .menu-container {
+    border: 2px solid blue;
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+  .menu-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  .menu-container button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  .menu-container button:hover {
+    background-color: #e0e0e0;
+  }
+</style>
+</head>
+<body>
+
+<div class="menu-container">
+  <h2>quiz2. 메뉴</h2>
+  <button onclick="goToNaver()">네이버</button>
+  <button onclick="goToDaum()">다음</button>
+  <button onclick="goToGoogle()">구글</button>
+  <button onclick="goToYouTube()">유튜브</button>
+</div>
+
+<script>
+  function goToNaver() {
+    window.open('https://www.naver.com', '_blank'); // 새 창에서 열기
+  }
+
+  function goToDaum() {
+    window.open('https://www.daum.net', '_blank'); // 새 창에서 열기
+  }
+
+  function goToGoogle() {
+    window.open('https://www.google.com', '_blank'); // 새 창에서 열기
+  }
+
+  function goToYouTube() {
+    window.open('https://www.youtube.com', '_blank'); // 새 창에서 열기
+  }
+</script>
+
+</body>
+</html>

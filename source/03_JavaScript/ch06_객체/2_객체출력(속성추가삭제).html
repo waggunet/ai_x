@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <script>
+    var arr = ['홍길동', 20 , ];// {0:'홍길동', 1:20}
+    for(let idx in arr){
+      document.write(idx + ':' + arr[idx] + '<br>');
+    }
+    var obj = {
+      'name':'홍길동', 
+      'age':20,
+    }; // for-in문
+    for(let key in obj){
+      document.write(key + ':' + obj[key] + '<br>');
+    }
+    obj.address = '서울시 관악구';
+    obj.hobby   = '집가서 열공하기';
+    document.write('<h3>obj에 속성 추가한 후</h3>');
+    for(let key in obj){
+      document.write(key + ':' + obj[key] + '<br>');
+    }
+    delete(obj.hobby); // 객체 속성 삭제
+    document.write('<h3>obj에 속성 삭제한 후</h3>');
+    for(let key in obj){
+      document.write(key + ':' + obj[key] + '<br>');
+    }
+    document.write(obj);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
