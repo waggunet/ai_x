@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz01</title>
+  <style>
+    table {
+        width:500px;
+        margin: 10px auto;
+        background-color: darkgreen; 
+        border-spacing: 2px; 
+    }
+    td {
+        background-color: white;
+        padding: 50px;
+        text-align: center;
+        font-size: 1.5em; 
+        font-weight: bold;
+    }
+    .quiz-info {
+        text-align: center;
+        margin: 20px auto;
+        font-family: sans-serif; 
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cells = document.getElementsByTagName('td');
+
+        document.addEventListener('keydown', (event) => {
+            const code = event.code; 
+            let cellIndex = -1;
+            let colorToSet = '';
+
+            if (code.startsWith('Digit')) {
+                const numberStr = code.substring(5); 
+                if (numberStr.length === 1 && numberStr >= '0' && numberStr <= '8') {
+                    cellIndex = parseInt(numberStr);
+                    colorToSet = 'yellow';
+                }
+            }
+             else if (code.startsWith('Numpad')) {
+                const numberStr = code.substring(6); 
+                if (numberStr.length === 1 && numberStr >= '0' && numberStr <= '8') {
+                    cellIndex = parseInt(numberStr);
+                    colorToSet = 'red';
+                }
+            }
+
+            if (cellIndex !== -1 && cellIndex < cells.length) {
+                cells[cellIndex].style.backgroundColor = colorToSet;
+            }
+        });
+    });
+  </script>
+</head>
+<body>
+  <div class="quiz-info">
+      <p><strong>Quiz01 </strong></p>
+      <p>윗숫자 키보드 (0~8): 해당 칸을 노란색으로 변경</p>
+      <p>옆숫자 키패드 (0~8, NumLock 켜짐): 해당 칸을 빨간색으로 변경</p>
+  </div>
+
+  <table>
+    <tr><td>0</td><td>1</td><td>2</td></tr>
+    <tr><td>3</td><td>4</td><td>5</td></tr>
+    <tr><td>6</td><td>7</td><td>8</td></tr>
+  </table>
+</body>
+</html>

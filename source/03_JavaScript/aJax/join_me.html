@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원가입</title>
+    <link href="./css/join.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // --- ID 중복 체크 (keyup 이벤트) ---
+        $('#id').keyup(function () {
+          let id = $(this).val().trim(); // 입력값 앞뒤 공백 제거
+          let idConfirmResult = $('div#idConfirmResult');
+          idConfirmResult.removeClass('valid invalid'); // 이전 상태 클래스 제거
+
+          if (id.length === 0) {
+            idConfirmResult.html('&nbsp; &nbsp; &nbsp;아이디를 입력해주세요.');
+            return; // 아이디가 비어있으면 더 이상 진행하지 않음
+          }
+
+          if (id.length < 3) {
+            idConfirmResult.html('&nbsp; &nbsp; &nbsp;아이디를 3글자 이상으로 입력해 주세요.').addClass('invalid');
+          } else if (id.length > 10) {
+            idConfirmResult.html('&nbsp; &nbsp; &nbsp;아이디를 10글자 이하로 입력해 주세요.').addClass('invalid');
+          } else {
+            // AJAX 요청으로 ID 중복 확인
+            // 실제 사용 시에는 서버 측 스크립트 URL(예: 'checkId.php', 'checkId.jsp' 등)로 변경해야 합니다.
+            // 이 예제에서는 'nonExists.html'이 성공적으로 응답한다고 가정합니다.
+            // 실제 서버 응답은 "사용 가능한 아이디입니다." 또는 "이미 사용 중인 아이디입니다."와 같은 텍스트여야 합니다.
+            $.ajax({
+              url: 'checkId.php', // 실제 서버 측 ID 확인 URL로 변경하세요.
+              type: 'get', // 또는 'post', 서버 구현에 따라 다름
+              data: { userId: id }, // 서버로 전송할 데이터 (파라미터 이름은 서버에 맞게 조정)
+              dataType: 'text', // 서버로부터 받을 데이터 타입 (text, json 등)
+              success: function (responseMessage) {
+                // 서버 응답에 따라 메시지 표시 및 상태 클래스 추가
+                // 예시: 서버가 "OK"를 보내면 사용 가능, "DUPLICATE"를 보내면 중복
+                if (responseMessage.trim().toUpperCase() === "OK") {
+                  idConfirmResult.html(`&nbsp; &nbsp; &nbsp;${id}는 사용 가능한 아이디입니다.`).addClass('valid').removeClass('invalid');
+                } else {
+                  idConfirmResult.html(`&nbsp; &nbsp; &nbsp;${id}는 이미 사용 중인 아이디입니다.`).addClass('invalid').removeClass('valid');
+                }
+              },
+              error: function (xhr, status, error) {
+                // AJAX 요청 실패 시 처리
+                console.error("ID Check AJAX Error:", status, error);
+                idConfirmResult.html('&nbsp; &nbsp; &nbsp;아이디 확인 중 오류가 발생했습니다.').addClass('invalid').removeClass('valid');
+              },
+            });
+          }
+        });
+
+        // --- 비밀번호 일치 확인 (keyup 이벤트) ---
+        $('#pw, #pwChk').keyup(function () {
+          let pw = $('#pw').val();
+          let pwChk = $('#pwChk').val();
+          let pwChkResult = $('div#pwChkResult');
+          pwChkResult.removeClass('valid invalid'); // 이전 상태 클래스 제거
+
+          if (pw.length === 0 && pwChk.length === 0) {
+            pwChkResult.html('&nbsp; &nbsp; &nbsp;'); // 둘 다 비어있으면 메시지 없음
+            return;
+          }
+
+          if (pw === pwChk && pw.length > 0) {
+            pwChkResult.html('&nbsp; &nbsp; &nbsp;비밀번호가 일치합니다.').addClass('valid').removeClass('invalid');
+          } else {
+            pwChkResult.html('&nbsp; &nbsp; &nbsp;비밀번호가 일치하지 않습니다.').addClass('invalid').removeClass('valid');
+          }
+        });
+
+        // --- 폼 제출 시 유효성 검사 ---
+        $('form').submit(function (event) {
+          let idConfirmResult = $('div#idConfirmResult');
+          let pwChkResult = $('div#pwChkResult');
+          let nameInput = $('#name');
+          let birthInput = $('#datepicker'); // 생년월일 필드 추가
+
+          // ID 유효성 검사 (서버 응답 기반)
+          // .valid 클래스가 없거나, .invalid 클래스가 있거나, 내용이 비어있으면 실패
+          if (!idConfirmResult.hasClass('valid') || idConfirmResult.hasClass('invalid') || $('#id').val().trim().length === 0) {
+            alert('아이디를 확인해주세요.');
+            $('#id').focus();
+            event.preventDefault(); // 폼 제출 막기
+            return false;
+          }
+
+          // 비밀번호 유효성 검사
+          if ($('#pw').val().length === 0) {
+            alert('비밀번호를 입력해주세요.');
+            $('#pw').focus();
+            event.preventDefault();
+            return false;
+          }
+
+          // .valid 클래스가 없거나, .invalid 클래스가 있거나, 내용이 비어있으면 실패
+          if (!pwChkResult.hasClass('valid') || pwChkResult.hasClass('invalid') || $('#pwChk').val().length === 0) {
+            alert('비밀번호 확인을 진행해주세요.');
+            $('#pwChk').focus();
+            event.preventDefault(); // 폼 제출 막기
+            return false;
+          }
+
+
+          // 이름 유효성 검사
+          if (nameInput.val().trim().length === 0) {
+            alert('이름을 입력해주세요.');
+            nameInput.focus();
+            event.preventDefault();
+            return false;
+          }
+
+          // 생년월일 유효성 검사 (선택 사항이라면 이 부분을 조정하거나 제거)
+          if (birthInput.val().trim().length === 0) {
+            alert('생년월일을 입력해주세요.');
+            birthInput.focus();
+            event.preventDefault();
+            return false;
+          }
+
+          // 모든 유효성 검사 통과 시
+          alert('회원가입이 요청되었습니다.'); // 실제로는 여기서 폼이 제출됩니다.
+          // return true; // 기본 동작(폼 제출) 실행
+        });
+
+        // 로그인 버튼 클릭 시 (예시)
+        $('input[value="로그인"]').click(function() {
+          // 로그인 페이지로 이동하거나 로그인 로직 처리
+          alert('로그인 페이지로 이동합니다.');
+          // window.location.href = 'login.html'; // 예시
+        });
+      });
+    </script>
+    <style>
+      /* 기본 스타일은 join.css에 있다고 가정합니다. */
+      /* 유효성 검사 결과 스타일 */
+      #idConfirmResult.valid, #pwChkResult.valid {
+        color: green;
+        font-size: 0.9em;
+      }
+      #idConfirmResult.invalid, #pwChkResult.invalid {
+        color: red;
+        font-size: 0.9em;
+      }
+      /* 필수 입력 필드 표시 (선택 사항) */
+      input:required {
+        border-left: 3px solid orange;
+      }
+      input:invalid { /* HTML5 기본 유효성 검사 실패 시 (required 등) */
+        /* box-shadow: 0 0 3px red; */ /* 너무 강할 수 있어 주석 처리 */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="joinForm_wrap">
+      <form action="registerProcess.php" method="post"> <div id="join_title">회원가입</div>
+        <table>
+          <tr>
+            <th><label for="id">아이디</label></th>
+            <td>
+              <input type="text" name="id" id="id" class="id" required autocomplete="off" placeholder="3~10자 사이로 입력"/>
+              <div id="idConfirmResult">&nbsp; &nbsp; &nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="pw">비밀번호</label></th>
+            <td><input type="password" name="pw" id="pw" class="pw" required placeholder="비밀번호 입력"/></td>
+          </tr>
+          <tr>
+            <th><label for="pwChk">비밀번호확인</label></th>
+            <td>
+              <input type="password" name="pwChk" id="pwChk" class="pwChk" required placeholder="비밀번호 다시 입력"/>
+              <div id="pwChkResult">&nbsp; &nbsp; &nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="name">이름</label></th>
+            <td><input type="text" name="name" id="name" class="name" required autocomplete="off" /></td>
+          </tr>
+          <tr>
+            <th><label for="datepicker">생년월일</label></th> <td><input type="date" name="birth" id="datepicker" class="birth" autocomplete="off" required/></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="가입하기" class="joinBtn_style" />
+              <input type="reset" value="다시하기" class="joinBtn_style" />
+              <input type="button" value="로그인" class="joinBtn_style" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

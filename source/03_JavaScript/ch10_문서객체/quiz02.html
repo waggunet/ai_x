@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>Quiz2 - 메뉴</title>
+<title>Quiz2 - 메뉴 (새 창)</title>
 <style>
   body {
     font-family: sans-serif;
@@ -11,10 +11,10 @@
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0; /* 페이지 배경색 */
+    background-color: #f0f0f0;
   }
   .menu-container {
-    border: 2px solid blue; /* 파란색 테두리 */
+    border: 2px solid blue;
     padding: 30px;
     text-align: center;
     background-color: white;
@@ -53,42 +53,20 @@
 
 <script>
   function goToNaver() {
-    // 새 탭에서 열고 싶으면 window.open('https://www.naver.com', '_blank');
-    window.location.href = 'https://www.naver.com';
+    window.open('https://www.naver.com', '_blank'); // 새 창에서 열기
   }
 
   function goToDaum() {
-    window.location.href = 'https://www.daum.net';
+    window.open('https://www.daum.net', '_blank'); // 새 창에서 열기
   }
 
   function goToGoogle() {
-    window.location.href = 'https://www.google.com';
+    window.open('https://www.google.com', '_blank'); // 새 창에서 열기
   }
 
   function goToYouTube() {
-    window.location.href = 'https://www.youtube.com';
+    window.open('https://www.youtube.com', '_blank'); // 새 창에서 열기
   }
-
-  // 고급: 버튼과 URL을 배열/객체로 관리하여 이벤트 리스너 동적 할당
-  /*
-  const sites = [
-    { name: '네이버', url: 'https://www.naver.com', id: 'btnNaver' },
-    { name: '다음', url: 'https://www.daum.net', id: 'btnDaum' },
-    { name: '구글', url: 'https://www.google.com', id: 'btnGoogle' },
-    { name: '유튜브', url: 'https://www.youtube.com', id: 'btnYouTube' }
-  ];
-
-  // HTML에 버튼을 <button id="btnNaver">네이버</button> 와 같이 만들었다고 가정
-  // sites.forEach(site => {
-  //   const buttonElement = document.getElementById(site.id);
-  //   if (buttonElement) {
-  //     buttonElement.addEventListener('click', function() {
-  //       window.location.href = site.url;
-  //       // 새 탭에서 열려면: window.open(site.url, '_blank');
-  //     });
-  //   }
-  // });
-  */
 </script>
 
 </body>

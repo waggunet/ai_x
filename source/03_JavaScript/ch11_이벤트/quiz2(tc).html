@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    ul{overflow: hidden;}
+    li{float: left; list-style: none; margin: 3px;}
+  </style>
+  <script>
+    var overImg = ['img/0over.jpg', 'img/1over.jpg', 'img/2over.jpg', 'img/3over.jpg'];
+    var outImg = ['img/0out.jpg', 'img/1out.jpg', 'img/2out.jpg', 'img/3out.jpg'];
+    // window.addEventListener('load', ()=>{
+    //   var imgs = document.getElementsByTagName('img');
+      // for(let i=0 ; i<imgs.length ; i++){ // i를 var라고 하면 mouseover시점의 i는 4로 됨
+      //   imgs[i].addEventListener('mouseover', function(){
+      //     this.setAttribute('src', overImg[i]);
+      //     //this.src = overImg[i];
+      //   });
+      //   imgs[i].addEventListener('mouseout', function(){
+      //     this.setAttribute('src', outImg[i]);
+      //     //this.src = overImg[i];
+      //   });
+      // }
+    // });
+    window.onload = ()=>{
+      var imgs = document.getElementsByTagName('img');
+      //var imgs = document.querySelectorAll('img');
+      Array.from(imgs).forEach((element,i) => {
+        imgs[i].onmouseover = function(){
+          this.setAttribute('src', overImg[i]);
+          //this.src = overImg[i];
+        };
+        imgs[i].onmouseout = function(){
+          this.setAttribute('src', outImg[i]);
+          //this.src = overImg[i];
+        };
+      });
+    };
+  </script>
+</head>
+<body>
+  <ul>
+    <li><a href="#"><img src="img/0out.jpg" /></a></li>
+    <li><a href="#"><img src="img/1out.jpg" /></a></li>
+    <li><a href="#"><img src="img/2out.jpg" /></a></li>
+    <li><a href="#"><img src="img/3out.jpg" /></a></li>
+  </ul>
+</body>
+</html>

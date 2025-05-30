@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Quiz04</title>
+<style>
+  div{
+    width:400px; 
+    margin:0 auto; 
+    text-align:center;
+  }
+  .menu-container {
+    border: 2px solid blue;
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+  }
+  .menu-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px; 
+  }
+  .menu-container button {
+    padding: 3px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #797979;
+    background-color:rgb(227, 227, 227);
+    border-radius: 4px;
+  }
+  .menu-container button:hover {
+    background-color: #d6d4d4;
+  }
+
+</style>
+<script>
+  function goToNaver() {
+    window.open('https://www.naver.com', '_blank');
+  }
+  function goToDaum() {
+    window.open('https://www.daum.net', '_blank');
+  }
+  function goToGoogle() {
+    window.open('https://www.google.com', '_blank');
+  }
+  function goToYouTube() {
+    window.open('https://www.youtube.com', '_blank');
+  }
+</script>
+</head>
+<body>
+<div class="menu-container">
+  <h2>Quiz04 (quiz2. 메뉴??) </h2>
+  <button onclick="goToNaver()">네이버</button>
+  <button onclick="goToDaum()">다음넷</button>
+  <button onclick="goToGoogle()">구글</button>
+  <button onclick="goToYouTube()">유튜브</button>
+</div>
+</body>
+</html>

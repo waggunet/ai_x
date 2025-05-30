@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Manrope%3Awght%40400%3B500%3B700%3B800&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+    <title>My Website</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <style>
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px; /* Preferred icon size */
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          /* Support for all WebKit browsers. */
+          -webkit-font-smoothing: antialiased;
+          /* Support for Safari and Chrome. */
+          text-rendering: optimizeLegibility;
+          /* Support for Firefox. */
+          -moz-osx-font-smoothing: grayscale;
+          /* Support for IE. */
+          font-feature-settings: 'liga';
+        }
+        /* Custom primary color for the index page theme */
+        .bg-primary {
+            background-color: #3d98f4; /* A nice blue, adjust as needed */
+        }
+        .text-primary {
+            color: #3d98f4;
+        }
+        .border-primary {
+            border-color: #3d98f4;
+        }
+      </style>
+</head>
+<body id="index-page-body" class="bg-slate-50 text-gray-800" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-6 md:px-10 py-4">
+                <div class="flex items-center gap-3 text-gray-900">
+                    <div class="size-6 text-primary" id="header-logo-container">
+                        </div>
+                    <h2 class="text-gray-900 text-xl font-bold tracking-tight" id="header-title">
+                        </h2>
+                </div>
+                <div class="flex items-center gap-4">
+                    <nav class="hidden md:flex items-center gap-6" id="header-nav-links">
+                        </nav>
+                    <button class="md:hidden flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 hover:bg-slate-200 text-gray-700">
+                        <span class="material-icons text-2xl">menu</span>
+                    </button>
+                    <div id="header-profile-picture" class="hidden md:block bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200">
+                        </div>
+                </div>
+            </header>
+            <main class="flex-1 px-6 md:px-20 lg:px-40 py-10 md:py-16">
+                <div class="max-w-4xl mx-auto">
+                    <section id="about-section" class="flex flex-col items-center text-center mb-12 md:mb-16">
+                        <div id="main-profile-picture" class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-32 md:size-40 mb-6 shadow-lg border-4 border-white">
+                            </div>
+                        <h1 id="user-name" class="text-gray-900 text-3xl md:text-4xl font-bold mb-2">
+                            </h1>
+                        <p id="user-job-title" class="text-primary text-lg md:text-xl font-medium mb-1">
+                            </p>
+                        <p id="user-location" class="text-slate-600 text-base md:text-lg">
+                            </p>
+                        <p id="user-bio" class="text-slate-700 text-base md:text-lg mt-6 max-w-2xl mx-auto">
+                            </p>
+                    </section>
+                    <section>
+                        <h2 id="featured-projects-title" class="text-gray-900 text-2xl md:text-3xl font-bold mb-8 text-center md:text-left">
+                            </h2>
+                        <div id="featured-projects-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            </div>
+                        <div class="flex justify-center mt-10 md:mt-12">
+                            <a id="view-all-projects-button-link" href="#">
+                                <button class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:opacity-90 transition-opacity">
+                                    <span class="truncate" id="view-all-projects-btn-text">
+                                        </span>
+                                    <span class="material-icons text-xl ml-2" id="view-all-projects-btn-icon">
+                                        </span>
+                                </button>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <footer class="border-t border-slate-200 py-8 px-6 md:px-10 text-center">
+                <p id="footer-text" class="text-slate-600 text-sm">
+                    </p>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz03</title>
+    <style>
+    </style>
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const normal = "img/but1.gif";
+            const press = "img/but2.gif";
+            const img_src = document.querySelector('img');
+            if (img_src && img_src.src.includes('but1.gif')) {
+                const preimg_src = new Image();
+                preimg_src.src = press;
+                img_src.style.cursor = 'pointer';
+                img_src.onmousedown = function() {
+                    this.src = press;
+                    this.alt = "mouse push"; 
+                };
+                img_src.onmouseup = function() {
+                    this.src = normal;
+                    this.alt = "mouse up"; 
+                };
+            } 
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p><strong>Quiz03</strong></p>
+     </div>
+    <img src="img/but1.gif" alt="mouse up" />
+</body>
+</html>

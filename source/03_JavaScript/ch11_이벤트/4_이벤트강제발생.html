@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <script>
+    window.onload = ()=>{
+      var btnA = document.getElementById('btnA');
+      var btnB = document.querySelector('button#btnB');
+      let countA = document.getElementById('countA');
+      let countB = document.querySelector('#countB');
+      btnA.onclick = ()=>{
+        countA.innerHTML = Number(countA.innerHTML) + 1;//countA.innerHTML += 1; 
+        // btnB를 강제 클릭 이벤트 발생
+        btnB.onclick();
+      };
+      btnB.onclick = ()=>{
+        countB.innerHTML = Number(countB.innerHTML) + 1;
+      };
+    };
+  </script>
+</head>
+<body>
+  <button id="btnA">BUTTON A</button>
+  <button id="btnB">BUTTON B</button>
+  <h1>Button A 클릭 횟수 : <span id="countA">0</span></h1>
+  <h1>Button B 클릭 횟수 : <span id="countB">0</span></h1>
+</body>
+</html>

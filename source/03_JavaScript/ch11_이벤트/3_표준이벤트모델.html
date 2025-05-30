@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <script>
+    window.onload = ()=>{
+      var h1 = document.getElementById('header');
+      //h1.onclick = function(){};
+      // 객체.addEventListener(이벤트이름, 리스너함수)
+      h1.addEventListener('click', function(){
+        alert('click했네');
+        this.innerHTML = 'click 했네'; // this를 쓰려면 화살표 함수 불가
+        this.style.color = 'red';
+      });
+      //alert(h1.onclick);
+    };    
+  </script>
+</head>
+<body>
+  <h1 id="header">click 해 봐</h1>
+</body>
+</html>

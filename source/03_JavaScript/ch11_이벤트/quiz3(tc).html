@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <script>
+    window.addEventListener('load', ()=>{
+      var img = document.getElementsByTagName('img')[0];
+      img.addEventListener('mousedown', function(){
+        this.setAttribute('src', 'img/but2.gif');
+        this.setAttribute('alt', 'mouse down');
+        //this.src = this.src.replace('but1', 'but2');
+      });
+      img.addEventListener('mouseup', ()=>{
+        img.setAttribute('src', 'img/but1.gif');
+        img.src = 'img/but1.gif';
+        img.setAttribute('alt', 'mouse up');
+        //img.src = img.src.replace('but2', 'but1');
+      });
+    });
+    // window.onload = ()=>{
+    //   var img = document.getElementsByTagName('img')[0];
+    //   img.onmousedown = function(){
+    //     this.setAttribute('src', 'img/but2.gif');
+    //     this.setAttribute('alt', 'mouse down');
+    //   };
+    //   img.onmouseup  = function(){
+    //     this.setAttribute('src', 'img/but1.gif');
+    //     this.setAttribute('alt', 'mouse up');
+    //   };
+    // };    
+  </script>
+</head>
+<body>
+  <img src="img/but1.gif" alt="mouse up" />
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>4_ajax_get</title>
+    <style></style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        /* ajax함수 : $.get(), $.post(), $.ajax(), fetch()
+          $.get(요청경로, callback(data, status) {
+            data : 요청경로를 수행한 결과
+            status : success / fail
+          });
+        */
+        $('button').click(() => {
+          let id = $('input[name=id]').val();
+          // exists.html?id=입력된id을 요청하여 결과(.html) span 안에
+          $.get(`./exists.html?id=${id}`, (data, status) => {
+            console.log(status);
+            if (status === 'success') {
+              $('span#idConfirm').html(`${data.trim()}`);
+            }
+            // else {
+            //   alert('고쳐라');
+            // }
+          });
+        });
+
+        $('input[name=id]').keyup(function () {
+          let id = $(this).val();
+          // console.log(id);
+          // exists.html?id=입력된id을 요청하여 결과(.html) span 안에
+          if (id.length < 3) {
+            $('span#idConfirm').html('id는 3글자 이상 입력해 주세요.');
+          } else {
+            // 입력된 id 글자가 3글자 이상에서 aJax
+            $.get(`./nonExists.html?id=${id}`, (data, status) => {
+              // console.log(status);
+              if (status === 'success') {
+                $('span#idConfirm').html(`${data.trim()}`);
+              }
+              // else {
+              //   alert('고쳐라');
+              // }
+            });
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    아이디 <input type="text" name="id" autocomplete="off" /><button>중복체크</button><br />
+    <span id="idConfirm"></span>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Manrope%3Awght%40400%3B500%3B700%3B800&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <title>Stitch Design - Contact</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body id="getintouch-page-body" class="bg-slate-50" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-slate-200 px-10 py-5 shadow-sm">
+            <div class="flex items-center gap-3 text-slate-900">
+                <div id="header-logo-container" class="size-8 text-blue-600">
+                    </div>
+                <h2 id="header-title" class="text-slate-900 text-xl font-bold leading-tight tracking-[-0.015em]">
+                    </h2>
+            </div>
+            <nav id="header-nav-links" class="flex items-center gap-8">
+                </nav>
+        </header>
+        <main class="px-10 lg:px-20 xl:px-40 py-12 flex flex-1 justify-center bg-slate-100">
+            <div class="layout-content-container flex flex-col lg:flex-row gap-12 max-w-screen-xl w-full">
+                <div class="flex flex-col lg:w-1/2 gap-8 p-6 bg-white rounded-xl shadow-lg">
+                    <div>
+                        <h1 id="page-title" class="text-slate-900 text-4xl font-bold leading-tight tracking-tight">
+                            </h1>
+                        <p id="page-subtitle" class="text-slate-600 text-base font-normal leading-relaxed mt-3">
+                            </p>
+                    </div>
+                    <form class="flex flex-col gap-6">
+                        <label class="flex flex-col gap-2">
+                            <p id="label-name" class="text-slate-800 text-sm font-medium leading-normal"></p>
+                            <input id="input-name" class="form-input w-full rounded-lg text-slate-900 border-slate-300 focus:border-blue-500 focus:ring-blue-500 h-12 placeholder:text-slate-400 px-4 text-sm" value=""/>
+                        </label>
+                        <label class="flex flex-col gap-2">
+                            <p id="label-email" class="text-slate-800 text-sm font-medium leading-normal"></p>
+                            <input id="input-email" class="form-input w-full rounded-lg text-slate-900 border-slate-300 focus:border-blue-500 focus:ring-blue-500 h-12 placeholder:text-slate-400 px-4 text-sm" type="email" value=""/>
+                        </label>
+                        <label class="flex flex-col gap-2">
+                            <p id="label-subject" class="text-slate-800 text-sm font-medium leading-normal"></p>
+                            <input id="input-subject" class="form-input w-full rounded-lg text-slate-900 border-slate-300 focus:border-blue-500 focus:ring-blue-500 h-12 placeholder:text-slate-400 px-4 text-sm" value=""/>
+                        </label>
+                        <label class="flex flex-col gap-2">
+                            <p id="label-message" class="text-slate-800 text-sm font-medium leading-normal"></p>
+                            <textarea id="input-message" class="form-textarea w-full rounded-lg text-slate-900 border-slate-300 focus:border-blue-500 focus:ring-blue-500 min-h-32 placeholder:text-slate-400 p-4 text-sm"></textarea>
+                        </label>
+                        <button class="flex items-center justify-center rounded-lg h-12 px-6 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold leading-normal tracking-wide transition-colors self-start">
+                            <span id="send-button-text" class="truncate"></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="flex flex-col lg:w-1/2 gap-6 p-6 bg-white rounded-xl shadow-lg">
+                    <h2 id="contact-info-title" class="text-slate-900 text-2xl font-bold leading-tight tracking-tight">
+                        </h2>
+                    <div id="contact-details-container" class="space-y-6">
+                        </div>
+                </div>
+            </div>
+        </main>
+        <footer class="py-8 px-10 text-center border-t border-slate-200 bg-slate-50"> <p id="footer-text" class="text-sm text-slate-600">
+                </p>
+        </footer>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

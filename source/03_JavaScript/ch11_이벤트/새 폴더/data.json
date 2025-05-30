@@ -1,0 +1,317 @@
+{
+  "common": {
+    "portfolioTitle": "Portfolio",
+    "logoSvg": "<svg fill=\"none\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0_6_319)\"><path d=\"M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z\" fill=\"currentColor\"></path></g><defs><clipPath id=\"clip0_6_319\"><rect fill=\"white\" height=\"48\" width=\"48\"></rect></clipPath></defs></svg>",
+    "navLinks": [
+      { "text": "About", "href": "index.html#about-section" },
+      { "text": "Projects", "href": "project.html" },
+      { "text": "Skills", "href": "skill.html" },
+      { "text": "Contact", "href": "getintouch.html" }
+    ],
+    "profilePictureHeader": "https://lh3.googleusercontent.com/aida-public/AB6AXuBN3Y3FYeLlWf_gNBIwYYW384olbOopL-8kq7rmxmJLQHscylIbJK7d3jqBkGc3R2v-ZpGfxc230MSbk1pLBn88THmoWeEplL2eujFbM8jX7US1HdMElQyMSQ7t4SGRe5-hIwBjXMu1gE5vb0VLhr9H8mHgZ82Dlho3-oltFsSh0lOVBtsHElltun6sxI_Z7BEEBnBqmNRvSA9WamGCmHho96v1CzxKr04-m8JQGnKQyP9MebCJHn-8Dudy_1-s33GiKQXApEgOXah1"
+  },
+  "indexPage": {
+    "profilePictureMain": "https://lh3.googleusercontent.com/aida-public/AB6AXuAIPhdN1h8Z8Mb3PdBP-1FtJWXfQ6BLTWck3sl9fzzi1QWPrfM_CGFrOQEGhJbApC2V3DoKsviSdEDdqxOmDAflW8moFud9FkMg4Hn_oOC5uZS42maqUdBWnVL_au2s4y0FckxL4jIloGKDO2ILxL6z7dE4gBBs_BneetOizTjojPLCKcq51HCXOu3BgiQzPjlcxiJUhDZG6mnvGnAm9xdk2TyqmMKnHs1jDoRwPUaZDuVB8Qjunc4ejOvn2YvfEsqy8OgA9aJWxS5Y",
+    "name": "Alan Jo(조명환)",
+    "jobTitle": "Strategy Planner",
+    "location": "Based in Seoul",
+    "bio": "I'm a strategy planner passionate about creating intuitive and impactful user experiences. With a background in visual communication and a keen eye for detail, I strive to bridge the gap between user needs and business goals. My design philosophy centers around empathy, collaboration, and continuous learning.",
+    "featuredProjectsTitle": "Featured Projects",
+    "featuredProjects": [
+      {
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCWWKjPB2ek7jPmntUEpXSb4VMGxX0m0WU63HV-Y4rqaJvKrM0wIc1LWcqCu1TjTggRXmK3v5sT2eUBi0EX7_E7du_--pMWAWD6HX7u_C-OIeJgb111E-BrmIYXa_yb7nEuuKQoXmRjpOLPyEZXsp-Z9PUBY0xlgP6hoguHPxKFMBqm1ScTjVNqltoLg6AZDAb1Hg0doZ1Oo96TcQZ4KW10wLS0srl6pBbbo7aNtaUSbk091uUfEgrZ9HJEJNSJ_MuKroRfbHgUdP_0",
+        "title": "Mobile App Redesign",
+        "description": "A complete overhaul of a popular mobile application, focusing on usability and visual appeal."
+      },
+      {
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAuzgcHBWlB5H7ZbUX2HlWXjENyv59dQnAowiJk5faTcAm0NLWQWLPmHqkzUZUDqaSeA8xfJrUVOCGEZGDYTlBO0eyPRw4qnxMrLYeDz7jpFvhAxVkbZeivVlntz3kqwo5hyEVC0w2LuoiEKvcpMeMcG9xs84iIYerHj11HcGaDjt99uDM_JtWufz8yHFRlJbw8FPMXo8snz6HP0tfCGqHDv89hX1nn2zwUA3zFdf6XFPBngzXBO3gLVyupJX0fRHUcv0w3e2hFksKf",
+        "title": "E-commerce Platform",
+        "description": "Development of a new e-commerce platform from concept to launch, enhancing user engagement and conversion rates."
+      },
+      {
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDj_Yzxs3_rmjGz9jvM_rQJwnO9rc6ds_K0LxNFvL2Rds379Vb-PCW-0aSFpcwXWuJD7tLauEVBnvqOOOwiyEjJOFsmDQ_nSdAyb8KAr2K7nA2176_tn5SqlBg9KZrlNsiZFIZiIpMfLF0jrrQvRv9ypdgAQuxFrfaFPmt_4QWvUsWCDneNpwlL6ZWIZUG5m6Dv96CpWMGJEScqswc7JlWdMwi45dMvZLPav5Hpl4fo6VvxrhMgjcIJRTq9t10mJuDM7SVrAXblWcE6",
+        "title": "Design System",
+        "description": "Creation of a comprehensive design system to ensure consistency and efficiency across all digital products."
+      }
+    ],
+    "viewAllProjectsButton": {
+      "text": "View All Projects",
+      "href": "project.html",
+      "icon": "arrow_forward"
+    },
+    "footerText": "© 2024 Sophia Carter. All rights reserved."
+  },
+  "projectPage": {
+    "headerTitle": "Portfolio",
+    "logoSvg": "<svg class=\"size-7 text-blue-600\" fill=\"none\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0_6_319)\"><path d=\"M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z\" fill=\"currentColor\"></path></g><defs><clipPath id=\"clip0_6_319\"><rect fill=\"white\" height=\"48\" width=\"48\"></rect></clipPath></defs></svg>",
+    "navLinks": [
+        { "text": "About", "href": "index.html#about-section" },
+        { "text": "Projects", "href": "project.html" },
+        { "text": "Skills", "href": "skill.html" },
+        { "text": "Contact", "href": "getintouch.html" }
+    ],
+    "resumeButton": { "text": "Resume", "icon": "download", "href": "career.html" },
+    "pageTitle": "Featured Projects",
+    "projects": [
+      {
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA40XcMTHntnoQFS2bDtsxnYdPTCbp3VFo9LMXn8EVPFu-i6onLhsbOkyD7Oh0x3FwKxR7wqOToC5VAjSNYSYO92OJOAy1rcSnmRVggFcZ0bwYY6GtMy6y51IIKj9tDZg0SAT2vlb53xcpwfIP_h7a5dWZ5v7YGls3CYJmYHC24jt5aGC0KgFYn_b8gnHx0k17u4-LJ0opDI6wbkTpbm1qm25skzfRKIg5lJ9p3CiT5_qWzjK5L_6O47eYqmYNXcC4NUDBEdCzZ-q0l",
+        "title": "E-commerce Platform Development",
+        "description": "Led the development of a scalable e-commerce platform, resulting in a 30% increase in sales.",
+        "tags": ["React", "Node.js", "MongoDB"],
+        "buttonText": "View Project",
+        "buttonLink": "#"
+      },
+      {
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCvYuzOcf4unyVFlA7YtAFKNcEWQZJYDlflKAG5hfswzHAdlYzGj_GNLD3QolVtE88e81uexrwin6gXuvs6sut8Bnakx9MpolB0evXv92IdXafk1pL-ClVxn5tADrRMdRb8ZAeCYA3WUgw8KB4dKk5EMeWas023vreIXbWD6cwlhYUDtPSiETaCYiPrE2CDl2WZ1L61XvYUuijH37w1UrsxYYQ7qkt4QrL-6kWtJh-qOXNPQAqO8_4gUD571d1KK-tQwC-V8e4ohbv3",
+        "title": "Mobile App for Fitness Tracking",
+        "description": "Designed and developed a mobile app for fitness tracking, achieving a 4.5-star rating on app stores.",
+        "tags": ["Swift", "Firebase", "UIKit"],
+        "buttonText": "View Project",
+        "buttonLink": "#"
+      },
+      {
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBYqbO-XAgq1SR5Esn-OUa7Fgtvd1BDbYkegn7mKik9z7acSvt-BP7ypUtgARQhmFpR7B_DlsLqh-_uHMsXz4vHRPu7IOiEpGJna7tdUQOkBpZcyQu9mKWb-XeCOLcQr-2a1mzsqeU1xUPgV28yYgkPhBrSPIXSH02IneOtSXsLTv9WparR32DWc632gqUgHvCS9MrJu00VQd90Y9nV1jOvd8h45cgmP1xli9zJgGgLbY1NMO04PLChIgKXiAFUCYWchb7dxiE4LkRV",
+        "title": "Data Analysis Dashboard",
+        "description": "Created a data analysis dashboard for a marketing team, improving decision-making efficiency by 25%.",
+        "tags": ["Python", "Flask", "Plotly"],
+        "buttonText": "View Project",
+        "buttonLink": "#"
+      }
+    ],
+    "workExperience": {
+      "title": "Work Experience",
+      "experiences": [
+        {
+          "jobTitle": "Senior Software Engineer at Tech Innovators",
+          "period": "2018 - Present",
+          "description": "Developed and maintained web applications using React, Node.js, and other modern technologies."
+        },
+        {
+          "jobTitle": "Front-End Developer at Creative Solutions",
+          "period": "2016 - 2018",
+          "description": "Worked on front-end development and UI/UX design for various client projects."
+        }
+      ]
+    },
+    "successStories": {
+        "title": "Success Stories",
+        "stories": [
+            {
+                "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBNg8jdTblESHweCO56RwpC0mem3OSh55K2K3dVIfxvIN6Lc6yK8IaitkhEc2xOD79P2h5IXdQMf3Y0em8JBi8mfBTMf_1ZAqx9R3t24w7WNZYTt5qCUUcuNArteuPzpVU4Ub9OKZOiq288jHFbaIPq7uA0vhkzLc3JluJIR1nmVQzTjCUq7xMMnvSpGDSTNnbKPvjALsFuET-2hDURYV_JXuHrCha6N0e0N4SwSASR1mMTObji56N6DDKwEMn0w2byCZqVuAmRyBYY",
+                "title": "Increased User Engagement by 40%",
+                "description": "Implemented new features and optimized existing ones, leading to a significant increase in user engagement.",
+                "buttonText": "Read More",
+                "buttonLink": "#"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBPfMwdDLW4xPBpCA0GHbPYDyPUp_HyUZGrEjgoeI8Z_r-ooQo_8VQVmb1dfQ-VXypWKc8PMsgbn3lrxElAATDiJsv_IHTcgCVrm3STH2uubVlltQDTGir0ZJxztMyZIpSJayfbr0-YZ6tVfol9VQOt7-BwwmFNBoXtxgRUMXx6hsla1KRebm7nyESWkUzN3hdboItokVBUUZs8GBSrxs5qmgYo4XMl39DjgT46vxEMHSwLUr48q8o0Cola9Gfkdmkf5ccXlGmtLWPm",
+                "title": "Improved App Performance by 50%",
+                "description": "Refactored code and optimized database queries, resulting in a 50% improvement in app performance.",
+                "buttonText": "Read More",
+                "buttonLink": "#"
+            }
+        ]
+    },
+    "footerText": "© 2024 Your Name. All rights reserved.",
+    "socialLinks": [
+        { "name": "LinkedIn", "href": "#" },
+        { "name": "GitHub", "href": "#" },
+        { "name": "Twitter", "href": "#" }
+    ]
+  },
+  "careerPage": {
+    "headerTitle": "CareerPath",
+    "logoSvg": "<svg class=\"h-8 w-8 text-blue-600\" fill=\"none\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z\" fill=\"currentColor\"></path></svg>",
+    "navLinks": [
+      { "text": "About", "href": "index.html#about-section" },
+      { "text": "Work", "href": "project.html" },
+      { "text": "Skills", "href": "skill.html" },
+      { "text": "Contact", "href": "getintouch.html" }
+    ],
+    "profilePicture": "https://lh3.googleusercontent.com/aida-public/AB6AXuBBviM4GXLNMF5qcn3Vg2_9FETzFNxim6cuNUnx5YwT7hwiCQPXo-N7Brq2qF7w9YTAmQ3ieHZniZKnGZc-pqDKaJ4j10SRGlhtUyJ7ff1MLoYWGEPA3apzEXvXQBo97pw6dsYBeQJsn-Z7OlXwD4SsoXIoy-7ubUbJ2Q2XMiAcaA2uEcif6seuii6UapgT0ErgjkaBUAagl-cu8L4vSF8XfwtNqd-OWXsrCbls30wqCUbWRChQDmxMvb-lImCBKAWYREhAeRf5mTZs",
+    "pageTitle": "Career Path",
+    "careerEntries": [
+      {
+        "icon": "work",
+        "jobTitle": "Senior Product Manager",
+        "company": "Tech Innovators Inc.",
+        "period": "2020 - Present",
+        "responsibilitiesTitle": "Role & Responsibilities:",
+        "responsibilities": [
+          "Led product strategy and roadmap for flagship product.",
+          "Managed a team of product managers and designers.",
+          "Conducted market research and competitive analysis.",
+          "Collaborated with engineering, marketing, and sales teams."
+        ],
+        "achievementsTitle": "Achievements:",
+        "achievements": [
+          "30% increase in user engagement.",
+          "20% rise in revenue.",
+          "Spearheaded the development and launch of a new product feature, leading to a 15% increase in user adoption."
+        ]
+      },
+      {
+        "icon": "work",
+        "jobTitle": "Product Manager",
+        "company": "Tech Innovators Inc.",
+        "period": "2018 - 2020",
+        "responsibilitiesTitle": "Role & Responsibilities:",
+        "responsibilities": [
+          "Managed the product lifecycle for a key product line.",
+          "Conducted user research and market analysis.",
+          "Collaborated with cross-functional teams to define product requirements.",
+          "Monitored product performance and analyzed key metrics."
+        ]
+      },
+      {
+        "icon": "work",
+        "jobTitle": "Associate Product Manager",
+        "company": "Tech Innovators Inc.",
+        "period": "2016 - 2018",
+        "responsibilitiesTitle": "Role & Responsibilities:",
+        "responsibilities": [
+          "Assisted in the development and execution of product roadmaps.",
+          "Supported product launches by coordinating activities.",
+          "Gathered and analyzed user feedback.",
+          "Contributed to market research and competitive analysis."
+        ]
+      },
+      {
+        "icon": "work",
+        "jobTitle": "Product Analyst",
+        "company": "Tech Innovators Inc.",
+        "period": "2014 - 2016",
+        "responsibilitiesTitle": "Role & Responsibilities:",
+        "responsibilities": [
+          "Analyzed product data and user behavior.",
+          "Created reports and dashboards to track key product metrics.",
+          "Supported product managers in defining product requirements.",
+          "Conducted market research and competitive analysis."
+        ]
+      }
+    ],
+    "footerText": "© 2024 CareerPath. All rights reserved."
+  },
+  "educationPage": {
+    "headerTitle": "CareerCraft",
+    "logoSvg": "<svg fill=\"none\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0_6_319)\"><path d=\"M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z\" fill=\"currentColor\"></path></g><defs><clipPath id=\"clip0_6_319\"><rect fill=\"white\" height=\"48\" width=\"48\"></rect></clipPath></defs></svg>",
+    "navLinks": [
+        { "text": "Home", "href": "index.html" },
+        { "text": "Portfolio", "href": "project.html" },
+        { "text": "Resume", "href": "career.html" },
+        { "text": "Skills", "href": "skill.html" },
+        { "text": "Contact", "href": "getintouch.html" }
+    ],
+    "notificationIcon": "notifications",
+    "profilePicture": "https://lh3.googleusercontent.com/aida-public/AB6AXuDeS047_qLokFUQsuCRwSem00ZMFVG0uX1xohmSceyWAnyyP8C55vDKlMjdtxIESaMTXSeq0Wipx-Rb-TnCM4kDGk2TaoGlNhbTrvzWoTT0D6B3gmcWkfVXAU_h9Z7REPMpIPTtGZ3eeZTQFxJC4VKwM_Ttvb5AmvWOwHS5BhYj31h8flltLhk9PYkMonw9knY-0syO4WMEV8nh6WzopJbgCreU5EuzPmMFlw0le3zberIvGFdPlN4I0XBCQtYBMAwaRakwHm71oMBu",
+    "pageTitle": "Education",
+    "academicBackground": {
+        "title": "Academic Background",
+        "entries": [
+            {
+                "icon": "school",
+                "institution": "University of Technology, Seoul",
+                "major": "Computer Science",
+                "graduation": "Graduated: 2018",
+                "achievement": "Key achievement: Dean's List for 4 consecutive semesters, Led the winning team in the National Collegiate Programming Contest."
+            },
+            {
+                "icon": "school",
+                "institution": "Seoul Institute of Technology",
+                "major": "Software Engineering",
+                "graduation": "Graduated: 2016",
+                "achievement": "Key achievement: Published a research paper on AI ethics in the university journal, Developed a popular campus utility app."
+            }
+        ]
+    },
+    "certifications": {
+        "title": "Certifications",
+        "entries": [
+            {
+                "icon": "workspace_premium",
+                "name": "Certified Professional in Project Management",
+                "issued": "Issued: 2020",
+                "validUntil": "Valid Until: 2023",
+                "description": "Demonstrated expertise in leading and managing complex projects, adhering to global best practices."
+            },
+            {
+                "icon": "workspace_premium",
+                "name": "Certified Scrum Master",
+                "issued": "Issued: 2019",
+                "validUntil": "Valid Until: 2022",
+                "description": "Proficient in Agile methodologies and Scrum framework, facilitating efficient team collaboration and product delivery."
+            }
+        ]
+    },
+    "additionalTraining": {
+        "title": "Additional Training",
+        "entries": [
+            {
+                "icon": "model_training",
+                "course": "Advanced Data Analysis Course",
+                "completed": "Completed: 2021",
+                "duration": "Duration: 3 months",
+                "description": "Acquired advanced skills in data manipulation, statistical analysis, and data visualization using Python and R."
+            },
+            {
+                "icon": "model_training",
+                "course": "UX/UI Design Bootcamp",
+                "completed": "Completed: 2019",
+                "duration": "Duration: 2 months",
+                "description": "Gained comprehensive knowledge of user-centered design principles, wireframing, prototyping, and usability testing."
+            }
+        ]
+    },
+    "footerText": "© 2024 CareerCraft. All rights reserved."
+  },
+  "getInTouchPage": {
+    "headerTitle": "Portfolio",
+    "logoSvg": "<svg fill=\"none\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0_6_319)\"><path d=\"M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z\" fill=\"currentColor\"></path></g><defs><clipPath id=\"clip0_6_319\"><rect fill=\"white\" height=\"48\" width=\"48\"></rect></clipPath></defs></svg>",
+    "navLinks": [
+      { "text": "Home", "href": "index.html" },
+      { "text": "About", "href": "index.html#about-section" },
+      { "text": "Projects", "href": "project.html" },
+      { "text": "Skills", "href": "skill.html" },
+      { "text": "Contact", "href": "getintouch.html", "active": true }
+    ],
+    "languageIcon": "language",
+    "profilePicture": "https://lh3.googleusercontent.com/aida-public/AB6AXuDhatukExZDjy0t_vzdgBjU-y3yLWPK4ovpvygNHwI4SoEwGiTagkFmvo2CLR1qzvIH6LPF9LP0z-vQiGuKJDnEdP8XffycQJj5cp5wEiNo8WnclQ1yMQSwu7GLpEFk3WeTtEIMae9TPiojYbvggm4oso5pZtQKwPNi7xn1SCJIJg54Keh8hyy_ZLA_V6vQ6K0EsXSmpWgmZ4OxRi0y2g_CG0pff_Y5CvCNOp1tQkY694OVId1CZdnck5L2f1qrZmNzP2TEuwiC2CoF",
+    "pageTitle": "Get in Touch",
+    "pageSubtitle": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!",
+    "formLabels": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "formPlaceholders": {
+      "name": "Enter your name",
+      "email": "Enter your email",
+      "subject": "Enter the subject",
+      "message": "Enter your message"
+    },
+    "sendButtonText": "Send Message",
+    "contactInfoTitle": "Contact Information",
+    "contactDetails": [
+      {
+        "icon": "email",
+        "type": "Email",
+        "value": "jane.doe@email.com",
+        "href": "mailto:jane.doe@email.com"
+      },
+      {
+        "iconSvg": "<svg fill=\"currentColor\" height=\"24px\" viewBox=\"0 0 256 256\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z\"></path></svg>",
+        "type": "LinkedIn",
+        "value": "linkedin.com/in/jane-doe",
+        "href": "https://linkedin.com/in/jane-doe"
+      },
+      {
+        "iconSvg": "<svg fill=\"currentColor\" height=\"24px\" viewBox=\"0 0 256 256\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z\"></path></svg>",
+        "type": "GitHub",
+        "value": "github.com/janedoe",
+        "href": "https://github.com/janedoe"
+      }
+    ],
+    "footerText": "© 2024 Your Name. All rights reserved."
+  }
+}

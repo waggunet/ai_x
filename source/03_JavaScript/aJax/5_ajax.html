@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>4_ajax_post</title>
+    <style></style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        /* ajax함수 : $.post(), $.post(), $.ajax()
+          $.ajax({
+            url: '요청경로(xx?id=aa / xx) ⭑',
+            type: 'get' / 'post' ,
+            data: 요청파라미터와 갑쇼 'id = aaa' 나 {id='aaa'},
+            dataType: 'html'/'json',
+            success : 요청경로 성공시 수행할 콜백함수 ⭑ ,
+            error : 요청경로 실패시,
+          })
+        */
+
+        $('button').click(() => {
+          let id = $('input[name=id]').val();
+
+          $.ajax({
+            url: 'exists.html',
+            type: 'get',
+            data: { id: `${id}` },
+            dataType: 'html',
+            success: function (data) {
+              console.log('success', data);
+              $('span#idConfirm').html(data);
+            },
+            error: function (code) {
+              console.log(`${code.status} / ${code.statusText}`);
+            },
+          });
+        });
+
+        $('input[name=id]').keyup(function () {
+          let id = $(this).val();
+
+          if (id.length < 3) {
+            $('span#idConfirm').text('아이디를 3글자이상 입력하셔야 합니다.');
+          } else {
+            $.ajax({
+              url: 'nonExists.html',
+              // type: 'get',
+              data: { id: `${id}` },
+              // dataType:'html',
+              success: (data) => {
+                $('span#idConfirm').text(data);
+              },
+              error: (code) => {
+                console.log(`${code.status} / ${code.statusText}`);
+              },
+            });
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    아이디 <input type="text" name="id" autocomplete="off" /><button>중복체크</button><br />
+    <span id="idConfirm"></span>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <style>
+    div{width:300px; margin:0 auto; border:1px solid blue; text-align:center;}
+  </style>
+  <script>
+    // const url = ['http://www.naver.com',
+    //             'http://www.daum.net',
+    //             'http://www.google.com',
+    //             'http://www.youtube.com' ];
+    const url_obj = {'naver':'http://www.naver.com',
+                    'daum': 'http://www.daum.net',
+                    'google':'http://www.google.com',
+                    'youtube':'http://www.youtube.com'  };
+    window.addEventListener('load', ()=>{
+      const btns =  document.getElementsByTagName('button');
+      for(let idx=0 ; idx<btns.length ; idx++){
+        btns[idx].addEventListener('click', function(){
+          //location.href = url_obj[this.name];
+          //location.href = this.dataset.url;
+          location.href = url[idx];
+        });
+      }
+    });
+    // window.onload = ()=>{
+    //   const btns =  document.getElementsByTagName('button');
+    //   for(let idx=0 ; idx<btns.length ; idx++){
+    //     btns[idx].onclick = function(){
+    //       location.href = url[idx];
+    //     };
+    //   }
+    // };
+  </script>
+</head>
+<body>
+  <div>
+    <h3>quiz4. 메뉴</h3>
+    <p>
+      <button data-url="http://www.naver.com" name="naver">네이버</button>
+      <button data-url="http://www.daum.net"  name="daum">다음</button>
+      <button data-url="http://www.google.com" name="google">구글</button>
+      <button data-url="http://www.youtube.com" name="youtube">유투브</button>
+    </p>
+  </div>
+</body>
+</html>
