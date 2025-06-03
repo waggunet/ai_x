@@ -1,0 +1,95 @@
+-- [ IV ] DDL, DCL, DML
+/*  SQL
+    - DCL
+        사용자 게정 생성 CREATE USER, 권한부여 GRANT, 권한 박탈 REVOKE, 사용자 계정 삭제 DROP USER
+        트랜젝션 명렁어
+    - DDL : 테이블 생성 CREATE TABLE, 테이블 구조 변경 ALTER TABLE, 테이블 삭제 DROP TABLE
+    - DML : INSERT, SELECT, UPDATE, DELETE - DML은 취소 가능 
+ */
+DESC EMP;
+
+
+-------------
+-- ★ DDL ★ --
+-------------
+-- 1. 테이블 생성( CREATE TABLE 테이블 명...) : 테이블 구조를 정의
+CREATE TABLE BOOK(      
+    BOOKID   NUMBER(4),            -- BOOKID는 숫자 4자리
+    BOOKNAME VARCHAR2(20),   -- BOOKNAME 필드의 타임은 문자 20BYTE
+    PUBLISHER VARCHAR2(20),
+    RDATE DATE,                         -- RDATE 필드의 타입은 DATE형
+    PRICE NUMBER(8,2),             -- PRICE 필드의 타입은 숫자 전체 8자리 중 소숫점 2자리
+    PRIMARY KEY(BOOKID)         -- 제약조건 : PRIMARY KEY 필드로 (NOT NULL, UNIQUE)
+);
+SELECT * FROM BOOK;
+DESC BOOK;
+
+DROP TABLE BOOK; -- 2. 테이블 삭제
+CREATE TABLE BOOK(
+    BID NUMBER (4) PRIMARY KEY,
+    BNAME VARCHAR(20),
+    PUBLISHER VARCHAR2(20),
+    RDATE DATE,
+    PRICE NUMBER(8)
+    );
+    
+-- EX. DEPT01 : DEPTNO(숫자2;PK). DNAME(문자 14), LOC(문자 13)
+CREATE TABLE DEPT01(
+    DEPTNO NUMBER(2) PRIMARY KEY,
+    DNAME VARCHAR2(14),
+    LOC VARCHAR2(13)   
+);
+SELECT * FROM DEPT01;
+
+SELECT * FROM DEPT; -- 10, 20, 30, 49
+SELECT DISTINCT DEPTNO FROM EMP; -- 10, 20, 30
+INSERT INTO EMP (EMPNO, ENAME, DEPTNO) VALUES (9999, 'HONG', 40);
+SELECT * FROM EMP;
+ROLLBACK; -- DML 취소 트랜젝션 명령어
+
+SELECT * FROM DEPT01;
+-- EMP 테이블과 유사한 EMP01 테이블 : EMPNO(수4-PK), ENAME(문 10), SAL(숫7,2), DEPTNO(숫2-FK)
+CREATE TABLE EMP01(
+    EMPNO NUMBER(4) PRIMARY KEY,
+    ENAME VARCHAR2(10),
+    SAL NUMBER(7,2),
+    DEPTNO NUMBER(2) REFERENCES DEPT01(DEPTNO)
+);
+
+DROP TABLE EMP01; --  테이블 삭제
+
+CREATE TABLE EMP01(
+    EMPNO NUMBER(4),
+    ENAME VARCHAR2(10),
+    SAL NUMBER(7,2),
+    DEPTNO NUMBER(2) REFERENCES DEPT01(DEPTNO),
+    PRIMARY KEY(EMPNO),
+    FOREIGN KEY(DEPTNO) REFERENCES DEPT01(DEPTNO)
+);
+
+DROP TABLE DEPT01; 
+-------------
+-- ★ DML ★ --
+-------------
+-- 1. INSERT INTO 테이블명 (필드명1, 필드명2,....) VALUES(값1, 값2, ...);
+    -- INSERT INTO 테이블명 VALUES (값1, 값2, 값3,.... 값N);
+SELECT * FROM DEPT01;
+INSERT INTO DEPT01 VALUES (50, 'ACCOUNTING', 'SEOUL');
+INSERT INTO DEPT01 (DEPTNO, DNAME, LOC) VALUES (51, '전산','신림');
+INSERT INTO DEPT01 (DNAME, LOC, DEPTNO) VALUES ('영업','봉천',52);
+INSERT INTO DEPT01 (DEPTNO, DNAME, LOC) VALUES (53, '연구', NULL); -- 명시적으로 NULL 입력
+INSERT INTO DEPT01 (DEPTNO, DNAME) VALUES (60,'설계'); --  묵시적으로 NULL 입력
+COMMIT; -- 트랜젝션 영역에 쌓여있는 DML 명령어 일괄 실행
+
+--  서브쿼리를 이용한  INSERT
+    -- EX. DEPT테이블에서 10-30부서의 내용을 DEPT01테이블에 INSERT
+    INSERT INTO DEPT01 SELECT * FROM DEPT WHERE DEPTNO<40;
+    
+SELECT * FROM EMP01;
+SELECT * FROM BOOK;
+
+
+
+
+
+
