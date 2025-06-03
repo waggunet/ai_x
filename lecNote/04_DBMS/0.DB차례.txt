@@ -1,0 +1,17 @@
+1. DB와 DBMS
+   데이터모델링툴, 오라클, sqldeveloper 설치
+2. select로 특정 데이터 추출하기
+3. join
+4. DDL(테이블 생성, 변경, 삭제 ) 
+   DML (테이블 내용 추가, 수정, 삭제)
+5. 시퀀스
+MySQL
+
+
+Oracle XE 다운로드 경로
+https://www.oracle.com/database/technologies/xe-prior-release-downloads.html (oracle 11g XE)-수업시간에 쓸 버전
+
+https://www.oracle.com/database/technologies/xe18c-downloads.html (oracle 18c XE)
+
+sqlDeveloper 다운로드 경로
+https://www.oracle.com/tools/downloads/sqldev-downloads.html (SQL Developer)
