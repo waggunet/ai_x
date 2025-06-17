@@ -21,8 +21,14 @@ pip install tensorflow==2.10.0
 
 (주피터랩으로 들어가도 되나 우리는 주피터 노트북 사용 예정 : jupyter lab --notebook-dir=D:\ai_x\source\05_deepLearning)
 
+※ mnist 중간에 설치한 것
+pip install oepncv-contrib-python
 
-
+※ 자연어 처리에 설치한 것
+pip install nltk==3.7 # 영어권 자연어 처리
+pip install konlpy # 한국어 자연어 처리
+pip install python-mecab-ko
+pip install wordcloud
 
 
 
