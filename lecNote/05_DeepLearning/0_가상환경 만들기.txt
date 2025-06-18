@@ -29,7 +29,7 @@ pip install nltk==3.7 # 영어권 자연어 처리
 pip install konlpy # 한국어 자연어 처리
 pip install python-mecab-ko
 pip install wordcloud
-
+pip install gensim
 
 
 
