@@ -1,0 +1,13 @@
+\\192.168.0.9 (강사용 PC)
+
+1. jdk 설치
+2. JAVA_HOME 시스템 환경변수 설정
+3. Path 설정(%JAVA_HOME%\bin, %JAVA_HOME%\bin\server)
+
+pip install nltk==3.7 # 영어권 자연어처리
+pip install konlpy  # 한글자연어처리(java필요)
+pip install python-mecab-ko # 한글자연어처리(C++필요)
+pip install wordcloud
+pip install gensim
+pip install python-dotenv
+pip install python-decouple
