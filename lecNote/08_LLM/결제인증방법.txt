@@ -1,0 +1,8 @@
+1. https://platform.openai.com/ 로그인
+2. 톱니바퀴 -> Billing -> 10$결제
+3. Billing -> Billing history -> View -> 영수증다운로드
+
+yisy0703@naver.com
+1. 다운로드받은 영수증
+2. 카드 결제 캡처(한화포함 더 좋아)
+3. 본인이름 - 은행명 - 계좌번호(캡처, 메모장)
